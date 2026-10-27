@@ -1,0 +1,3080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Lead Generation Agency — Pay Per Lead | Plemio</title>
+<meta name="description" content="Pay-per-lead B2B lead generation via cold email outreach: we find decision-makers, write personal emails and deliver warm leads from $35.">
+<link rel="canonical" href="https://plemio.com/">
+</head>
+<body>
+<!-- ===== Plemio | Home (EN) | Part 1 of 3: styles, header, hero, clients, problem, how it works, economics =====
+     Paste as T123 blocks in order: 1 → 2 → 3. -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+html, body { margin: 0; padding: 0; overflow-x: clip; max-width: 100%; }
+html { scroll-behavior: smooth; }
+
+#prices, #cases, #faq { scroll-margin-top: 76px; }
+
+.ct-page *, .ct-page *::before, .ct-page *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.ct-page { overflow-x: clip; }
+
+.ct-page {
+  --purple:     #5B4BD8;
+  --purple-lt:  #F0ECFF;
+  --purple-mid: #9A90F2;
+  --teal:       #0E8A6A;
+  --teal-lt:    #EAF8F3;
+  --coral:      #C66E4A;
+  --coral-lt:   #FFF1E9;
+  --amber-lt:   #FFF6E8;
+  --amber:      #7A4A12;
+  --text:       #14152A;
+  --text-2:     #4B5563;
+  --text-3:     #8A90A2;
+  --bdr:        #E7E8EF;
+  --bg:         #FFFFFF;
+  --bg-2:       #F6F7FB;
+  --radius:     14px;
+  --radius-lg:  24px;
+  font-family: 'Manrope', 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+
+.ct-nav {
+  position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 1000;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--bdr);
+  padding: 0 max(2rem, calc((100% - 1200px) / 2 + 2rem));
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.ct-nav-spacer { height: 60px; }
+
+
+.ct-nav, .ct-nav * { box-sizing: border-box; margin: 0; }
+.ct-nav {
+  --purple:     #5B4BD8;
+  --purple-lt:  #F0ECFF;
+  --purple-mid: #9A90F2;
+  --text:       #14152A;
+  --text-2:     #4B5563;
+  --text-3:     #8A90A2;
+  --bdr:        #E7E8EF;
+  --bg:         #FFFFFF;
+  --bg-2:       #F6F7FB;
+  --radius:     14px;
+  font-family: 'Manrope', 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.ct-nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 17px; font-weight: 600; color: var(--text);
+  text-decoration: none;
+}
+.ct-nav-bubble {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--purple);
+  display: flex; align-items: center; justify-content: center;
+}
+.ct-nav-bubble svg { width: 16px; height: 16px; fill: #fff; }
+.ct-nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.ct-nav-links a {
+  font-size: 14px; color: var(--text-2); text-decoration: none;
+  transition: color .2s;
+}
+.ct-nav-links a:hover { color: var(--purple); }
+
+
+.ct-cta-primary, .ct-cta-primary:link, .ct-cta-primary:visited {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+  border-radius: var(--radius); padding: 10px 20px;
+  font-size: 14px; font-weight: 600; font-family: inherit;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: opacity .2s, background .2s, border-color .2s;
+}
+.ct-cta-primary, .ct-cta-primary:link, .ct-cta-primary:visited {
+  background: var(--purple); color: #fff !important; border: 1px solid var(--purple);
+}
+.ct-cta-primary:hover { opacity: .9; }
+.ct-cta-group { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2.25rem; }
+.ct-hero-cta-mobile { display: none; }
+
+/* Nav actions + burger */
+.ct-nav-actions { display: flex; align-items: center; gap: 10px; }
+.ct-burger {
+  display: none;
+  width: 40px; height: 40px; padding: 0; border: none; background: none;
+  cursor: pointer; flex-direction: column; justify-content: center; gap: 5px; flex-shrink: 0;
+}
+.ct-burger span { display: block; width: 22px; height: 2px; margin: 0 auto; background: var(--text); border-radius: 2px; transition: transform .25s, opacity .2s; }
+.ct-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.ct-burger.open span:nth-child(2) { opacity: 0; }
+.ct-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.ct-mobile-menu {
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: #fff; border-bottom: 1px solid var(--bdr);
+  box-shadow: 0 14px 30px rgba(15,23,42,.10);
+  display: flex; flex-direction: column; padding: .5rem 0;
+}
+.ct-mobile-menu[hidden] { display: none; }
+.ct-mobile-menu a { padding: .85rem 1.5rem; font-size: 15px; color: var(--text-2); text-decoration: none; }
+.ct-mobile-menu a:hover { background: var(--bg-2); color: var(--purple); }
+@media (min-width: 961px) { .ct-mobile-menu { display: none; } }
+
+/* LAYOUT */
+.ct-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.ct-section { padding: 5rem 0; border-bottom: 1px solid var(--bdr); }
+.ct-section:last-of-type { border-bottom: none; }
+
+.ct-eyebrow {
+  display: inline-block; font-size: 12px; font-weight: 700;
+  letter-spacing: .2em; text-transform: uppercase;
+  padding: 0; margin-bottom: .85rem; color: var(--purple);
+}
+.ey-purple, .ey-teal, .ey-coral, .ey-amber { background: none; color: var(--purple); }
+
+.ct-h2 {
+  font-size: 34px; font-weight: 800; line-height: 1.15;
+  margin-bottom: 1.5rem; letter-spacing: -.025em;
+  padding-bottom: 1.35rem; border-bottom: 1px solid var(--bdr);
+}
+.ct-lead { font-size: 17px; color: var(--text-2); line-height: 1.7; max-width: 700px; }
+
+/* HERO */
+.ct-hero {
+  padding: 3.5rem 0 4rem;
+  background: #fff;
+  border-bottom: 1px solid var(--bdr);
+}
+.ct-hero-inner { display: block; }
+.ct-hero-left { max-width: 760px; }
+.ct-hero h1 {
+  font-size: 56px; font-weight: 800; line-height: 1.06;
+  letter-spacing: -.035em; margin-bottom: 1.5rem;
+}
+.ct-hero h1 em { font-style: normal; color: var(--purple); }
+.ct-hero-sub { font-size: 18px; color: var(--text-2); line-height: 1.65; margin-bottom: 0; max-width: 520px; }
+.ct-btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+.ct-btn-primary,
+.ct-btn-primary:link,
+.ct-btn-primary:visited {
+  background: linear-gradient(135deg, var(--purple) 0%, #6F5DFF 100%); color: #fff !important;
+  border: none;
+  border-radius: 999px; padding: 14px 28px;
+  font-size: 15px; font-weight: 700; cursor: pointer;
+  text-decoration: none; transition: transform .2s, box-shadow .2s, opacity .2s;
+  display: inline-block;
+  box-shadow: 0 12px 28px rgba(91,75,216,.22);
+}
+.ct-btn-primary:hover { opacity: .95; transform: translateY(-1px); }
+.ct-btn-outline,
+.ct-btn-outline:link,
+.ct-btn-outline:visited {
+  background: rgba(255,255,255,.9); color: var(--purple);
+  border: 1px solid rgba(91,75,216,.18);
+  border-radius: 999px; padding: 14px 24px;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  text-decoration: none; transition: all .2s;
+  display: inline-block;
+}
+.ct-btn-outline:hover { border-color: var(--purple); box-shadow: 0 8px 20px rgba(91,75,216,.10); }
+
+.ct-hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--bdr);
+}
+.ct-hstat { padding: 0 1.75rem; border-left: 1px solid var(--bdr); }
+.ct-hstat:first-child { padding-left: 0; border-left: none; }
+.ct-hstat .num { font-size: 24px; font-weight: 800; color: var(--text); line-height: 1.1; letter-spacing: -.01em; }
+.ct-hstat .desc { font-size: 14px; color: var(--text-3); margin-top: .4rem; line-height: 1.4; }
+
+
+.ct-hero-inner { display: grid; grid-template-columns: minmax(0,560px) 300px; justify-content: start; gap: 2.5rem; align-items: center; }
+.ct-hero-left { max-width: 560px; }
+
+
+.ct-hero-partner { margin-top: 1.25rem; }
+.ct-hero-partner .lbl { font-size: 14px; color: var(--text-3); margin-bottom: .55rem; }
+.ct-hero-partner img {
+  display: block; width: 130px; max-width: 100%; height: auto;
+  
+  margin: -11px 0 -11px -20px;
+}
+
+.ct-mailcard {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 18px 44px -16px rgba(20,21,42,.22), 0 4px 12px rgba(20,21,42,.06);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #202124;
+}
+.ct-mail-meta { font-size: 11px; line-height: 1.5; margin-bottom: 12px; }
+.ct-mail-meta .val { word-break: break-word; }
+.ct-mail-body p { font-size: 11px; line-height: 1.5; margin-bottom: 11px; }
+.ct-mail-body p:last-child { margin-bottom: 0; }
+.ct-mailredact {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10px;
+  margin: 0 1px;
+  border-radius: 1px;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,.05) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.05) 0 2px, transparent 2px 4px),
+    #c4c4c4;
+  overflow: hidden;
+  text-indent: -9999px;
+  user-select: none;
+}
+.ct-redact-sm { width: 46px; }
+.ct-redact-md { width: 88px; }
+.ct-redact-lg { width: 150px; }
+
+/* PROCESS (5-column, presentation style) */
+.ct-proc-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 2.5rem; }
+.ct-proc-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.ct-proc-grid.cols-4 .ct-proc-col { display: flex; flex-direction: column; }
+.ct-proc-grid.cols-4 .ct-proc-col h3 { min-height: 2.6em; margin-bottom: 1rem; }
+.ct-proc-grid.cols-4 .ct-proc-col .ct-more-link { margin-top: auto; padding-top: 1.25rem; }
+.ct-proc-col { padding: 0 1.5rem; border-left: 1px solid var(--bdr); }
+.ct-proc-col:first-child { padding-left: 0; border-left: none; }
+.ct-proc-col .ct-ico { margin-bottom: 1.4rem; }
+.ct-proc-num { font-size: 14px; font-weight: 700; color: var(--purple); margin-bottom: .45rem; }
+.ct-proc-col h3 { font-size: 17px; font-weight: 700; line-height: 1.25; margin-bottom: 1.35rem; min-height: 2.5em; }
+.ct-proc-col p { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+
+
+.ct-tech-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 3rem; align-items: start; }
+.ct-tech-visual { grid-column: 1; grid-row: 1; }
+.ct-tech-compare { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 2.25rem; }
+.ct-tech-avatar { position: relative; width: 94px; height: 94px; border-radius: 50%; border: 2px solid var(--text); display: flex; align-items: center; justify-content: center; color: var(--purple); flex-shrink: 0; }
+.ct-tech-avatar > svg { width: 44px; height: 44px; }
+.ct-tech-badge { position: absolute; top: -4px; right: -10px; background: var(--text); color: #fff; font-size: 13px; font-weight: 800; border-radius: 999px; padding: 4px 9px; }
+.ct-tech-arrow { color: var(--purple); flex-shrink: 0; display: flex; }
+.ct-tech-arrow svg { width: 26px; height: 26px; }
+.ct-tech-mailgrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.ct-tech-mail { width: 40px; height: 40px; border-radius: 10px; background: var(--purple-lt); display: flex; align-items: center; justify-content: center; color: var(--purple); }
+.ct-tech-mail svg { width: 20px; height: 20px; }
+.ct-tech-nums { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.ct-tech-num-col .lbl { font-size: 14px; color: var(--text-2); }
+.ct-tech-num-col .sub { font-size: 13px; color: var(--text-3); margin-top: .25rem; min-height: 1.3em; }
+.ct-tech-num-col .big { font-size: 25px; font-weight: 800; color: var(--text); margin-top: .8rem; letter-spacing: -.02em; white-space: nowrap; }
+.ct-tech-num-col .big.purple { color: var(--purple); }
+.ct-tech-text { border-left: 1px solid var(--bdr); padding-left: 3rem; grid-column: 2; grid-row: 1 / 3; }
+.ct-tech-cta { grid-column: 1; grid-row: 2; align-self: end; margin-top: 0; }
+.ct-tech-text p { font-size: 16px; color: var(--text-2); line-height: 1.7; padding: 1.3rem 0; border-bottom: 1px solid var(--bdr); }
+.ct-tech-text p:first-child { padding-top: 0; }
+.ct-tech-text p:last-child { border-bottom: none; padding-bottom: 0; }
+
+/* SHARED OUTLINE ICON (presentation style) */
+.ct-ico {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 1.6px solid var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.1rem; color: var(--purple); flex-shrink: 0;
+}
+.ct-ico svg { width: 24px; height: 24px; }
+
+/* PROBLEM */
+.ct-prob-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 2rem; }
+.ct-prob-card {
+  background: var(--bg-2); border-radius: var(--radius-lg);
+  padding: 1.25rem; border: 1px solid var(--bdr);
+}
+.ct-prob-card h3 { font-size: 15px; font-weight: 600; margin-bottom: .5rem; line-height: 1.4; }
+.ct-prob-card p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+
+/* STEPS */
+.ct-steps-grid { margin-top: 2rem; display: flex; flex-direction: column; gap: 0; }
+.ct-step-row {
+  display: flex; gap: 1.25rem; align-items: flex-start;
+  padding: 1.25rem 0; border-bottom: 1px solid var(--bdr);
+}
+.ct-step-row:last-child { border-bottom: none; }
+.ct-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--purple-lt); color: var(--purple);
+  font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 2px;
+}
+.ct-step-body h3 { font-size: 16px; font-weight: 600; margin-bottom: .3rem; }
+.ct-step-body p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+.ct-step-tag {
+  display: inline-block; margin-top: .4rem;
+  font-size: 11px; background: var(--purple-lt); color: var(--purple);
+  padding: 2px 10px; border-radius: 20px; font-weight: 500;
+}
+
+/* BENEFITS / INCLUDED */
+.ct-ben-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 2rem; }
+.ct-ben-card {
+  background: #fff; border: 1px solid var(--bdr);
+  border-radius: var(--radius-lg); padding: 1.5rem;
+  transition: box-shadow .2s;
+}
+.ct-ben-card:hover { box-shadow: 0 4px 20px rgba(83,74,183,.08); }
+.ct-ben-icon {
+  width: 54px; height: 54px; border-radius: 50%;
+  border: 1.6px solid var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.1rem; color: var(--purple);
+}
+.ct-ben-icon svg { width: 24px; height: 24px; }
+.ct-ben-card h3 { font-size: 16px; font-weight: 600; margin-bottom: .4rem; }
+.ct-ben-card p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+
+
+.ct-pres-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px; margin-top: 2rem;
+}
+.ct-pres-card {
+  display: flex; flex-direction: column;
+  background: #fff; border: 1px solid var(--bdr);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+}
+.ct-pres-card:hover {
+  box-shadow: 0 10px 30px rgba(83,74,183,.10);
+  transform: translateY(-3px);
+  border-color: var(--purple-mid);
+}
+.ct-pres-cover {
+  position: relative; padding: 1.1rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--bdr);
+}
+.ct-pres-card.acc-purple .ct-pres-cover { background: linear-gradient(135deg, var(--purple-lt), #fff); }
+.ct-pres-card.acc-teal   .ct-pres-cover { background: linear-gradient(135deg, var(--teal-lt), #fff); }
+.ct-pres-card.acc-coral  .ct-pres-cover { background: linear-gradient(135deg, var(--coral-lt), #fff); }
+.ct-pres-card.acc-amber  .ct-pres-cover { background: linear-gradient(135deg, var(--amber-lt), #fff); }
+.ct-pres-brand {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 600; color: var(--text-2);
+}
+.ct-pres-brand .dot {
+  width: 18px; height: 18px; border-radius: 5px;
+  background: var(--purple); display: inline-flex;
+  align-items: center; justify-content: center;
+}
+.ct-pres-brand .dot svg { width: 11px; height: 11px; fill: #fff; }
+.ct-pres-tag {
+  position: absolute; top: 1.1rem; right: 1.25rem;
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
+}
+.ct-pres-card.acc-purple .ct-pres-tag { background: var(--purple-lt); color: var(--purple); }
+.ct-pres-card.acc-teal   .ct-pres-tag { background: var(--teal-lt);   color: var(--teal); }
+.ct-pres-card.acc-coral  .ct-pres-tag { background: var(--coral-lt);  color: var(--coral); }
+.ct-pres-card.acc-amber  .ct-pres-tag { background: var(--amber-lt);  color: var(--amber); }
+.ct-pres-cover h3 {
+  font-size: 17px; font-weight: 700; line-height: 1.3;
+  margin-top: .75rem; letter-spacing: -.01em;
+}
+.ct-pres-body { display: flex; flex-direction: column; flex: 1; padding: 1.1rem 1.25rem 1.25rem; }
+.ct-pres-body p { font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 1.1rem; }
+.ct-pres-link,
+.ct-pres-link:link,
+.ct-pres-link:visited {
+  margin-top: auto; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  padding: 9px 18px; border-radius: var(--radius);
+  border: 1.5px solid var(--bdr); color: var(--text);
+  background: #fff; transition: background .2s, border-color .2s, color .2s;
+}
+.ct-pres-card.acc-purple .ct-pres-link:hover { background: var(--purple); border-color: var(--purple); color: #fff; }
+.ct-pres-card.acc-teal   .ct-pres-link:hover { background: var(--teal);   border-color: var(--teal);   color: #fff; }
+.ct-pres-card.acc-coral  .ct-pres-link:hover { background: var(--coral);  border-color: var(--coral);  color: #fff; }
+.ct-pres-card.acc-amber  .ct-pres-link:hover { background: var(--amber);  border-color: var(--amber);  color: #fff; }
+.ct-pres-card.is-current { border-color: var(--purple-mid); }
+.ct-pres-current-badge { font-size: 12px; color: var(--purple); font-weight: 600; margin-top: auto; }
+
+/* VOL BOXES (result numbers, presentation style) */
+.ct-vol-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2rem; }
+.ct-vol-box { padding: .25rem 1.75rem; border-left: 1px solid var(--bdr); }
+.ct-vol-box:first-child { padding-left: 0; border-left: none; }
+.ct-vol-box .mo { font-size: 12px; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .6rem; }
+.ct-vol-box .vnum { font-size: 46px; font-weight: 800; color: var(--text); letter-spacing: -.03em; line-height: 1; }
+.ct-vol-box:last-child .vnum { color: var(--purple); }
+.ct-vol-box .vlbl { font-size: 14px; color: var(--text-3); margin-top: .5rem; }
+
+/* CASES */
+.ct-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 2rem; }
+.ct-case-card {
+  background: #fff; border: 1px solid var(--bdr);
+  border-radius: var(--radius-lg); padding: 1.75rem;
+  display: flex; flex-direction: column;
+}
+.ct-case-head { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.1rem; }
+.ct-case-ico { width: 42px; height: 42px; border-radius: 50%; border: 1.6px solid var(--purple); display: flex; align-items: center; justify-content: center; color: var(--purple); flex-shrink: 0; }
+.ct-case-ico svg { width: 21px; height: 21px; }
+.ct-case-head h3 { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.2; }
+.ct-case-sub { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+.ct-case-desc { font-size: 14px; color: var(--text-2); line-height: 1.6; margin-bottom: .75rem; }
+.ct-case-who { font-size: 14px; color: var(--text-2); line-height: 1.6; padding-bottom: 1.1rem; margin-bottom: 1.1rem; border-bottom: 1px solid var(--bdr); }
+.ct-case-who span { color: var(--purple); font-weight: 700; }
+.ct-case-cost { margin-top: auto; margin-bottom: 1rem; }
+.ct-case-cost span { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--text-3); margin-bottom: .4rem; }
+.ct-case-cost b { font-size: 30px; font-weight: 800; color: var(--purple); letter-spacing: -.02em; }
+.ct-case-tbl { width: 100%; border-collapse: collapse; }
+.ct-case-tbl td { padding: .55rem 0; font-size: 14px; border-bottom: 1px solid var(--bdr); }
+.ct-case-tbl td:first-child { color: var(--text-3); }
+.ct-case-tbl td:last-child { font-weight: 700; text-align: right; }
+.ct-case-tbl tr:last-child td { border-bottom: none; }
+
+
+.ct-carousel-wrap { position: relative; }
+.ct-carousel-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; border: 1px solid var(--bdr);
+  box-shadow: 0 4px 18px rgba(83,74,183,.18);
+  cursor: pointer; z-index: 5;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--purple); font-size: 24px; line-height: 1;
+  transition: background .2s, color .2s, border-color .2s;
+  touch-action: manipulation; -webkit-user-select: none; user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.ct-carousel-arrow:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+.ct-carousel-arrow.prev { left: -22px; }
+.ct-carousel-arrow.next { right: -22px; }
+
+/* Mobile-only carousel (problem & process): plain grid on desktop */
+.ct-mobcar .ct-viewport { overflow: visible; }
+.ct-mobcar .ct-carousel-arrow { display: none; }
+
+/* CASES CAROUSEL */
+.ct-cases-carousel { margin-top: 2rem; }
+.ct-cases-track {
+  display: flex; gap: 20px; will-change: transform;
+}
+.ct-cases-track .ct-case-card {
+  flex: 0 0 calc(33.333% - 14px); min-width: calc(33.333% - 14px);
+  scroll-snap-align: start;
+}
+
+/* PRICING (two plain columns, presentation style) */
+.ct-pricing-wrap { display: flex; align-items: center; gap: 0; margin-top: 2rem; }
+.ct-price-card {
+  flex: 1; min-width: 0;
+  background: none; border: none; border-radius: 0;
+  padding: 0 2.5rem;
+}
+.ct-price-card:first-child { padding-left: 0; }
+.ct-price-card:last-child { padding-right: 0; }
+.ct-price-card.featured { border: none; }
+
+.ct-price-plus-wrap { display: flex; align-items: center; padding: 0 4px; flex-shrink: 0; }
+.ct-price-plus {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--purple-lt); color: var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; font-weight: 600; line-height: 1;
+}
+.ct-price-lead b { color: var(--purple); font-weight: 700; }
+.ct-price-lbl { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--text-3); margin-bottom: 1rem; }
+.ct-price-val { font-size: 40px; font-weight: 800; color: var(--purple); margin-bottom: 1.1rem; line-height: 1.1; letter-spacing: -.02em; }
+.ct-price-val span { font-size: inherit; font-weight: inherit; color: inherit; }
+.ct-price-desc { font-size: 15px; color: var(--text-2); line-height: 1.7; margin-top: 0; }
+.ct-price-note {
+  margin-top: 2.5rem; padding-top: 1.75rem;
+  background: none; border-radius: 0; border-left: none;
+  border-top: 2px solid var(--text);
+  font-size: 15px; color: var(--text-3); line-height: 1.7;
+}
+.ct-price-note b { color: var(--text); font-weight: 800; }
+
+
+.ct-price-example {
+  margin-top: 2.25rem;
+  background: var(--purple-lt);
+  border: 1px solid var(--bdr);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.6rem;
+}
+.ct-price-example .pe-title {
+  font-size: 12px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--purple); margin-bottom: 1rem;
+}
+.ct-price-example .pe-row { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.35rem; }
+.ct-price-example .pe-item { display: flex; flex-direction: column; gap: .3rem; }
+.ct-price-example .pe-cap { font-size: 13px; color: var(--text-3); line-height: 1.3; }
+.ct-price-example .pe-cap.accent { color: var(--purple); font-weight: 600; }
+.ct-price-example .pe-val { font-size: 21px; font-weight: 800; color: var(--text); letter-spacing: -.01em; line-height: 1; }
+.ct-price-example .pe-val.accent { font-size: 23px; color: var(--purple); }
+.ct-price-example .pe-op { font-size: 20px; color: var(--purple-mid); font-weight: 700; line-height: 1; }
+
+
+
+.ct-risk-lead { max-width: none; }
+.ct-risk-lead b { color: var(--text); font-weight: 700; }
+.ct-risk-proof {
+  display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;
+  max-width: none;
+  margin-top: 2.5rem; padding: 1.75rem 0;
+  border-top: 1px solid var(--bdr); border-bottom: 1px solid var(--bdr);
+}
+.ct-risk-proof .num { font-size: clamp(60px, 10vw, 92px); font-weight: 800; color: var(--purple); line-height: .88; letter-spacing: -.04em; flex-shrink: 0; }
+.ct-risk-proof .label { font-size: 19px; line-height: 1.5; color: var(--text-2); flex: 1; min-width: 240px; }
+.ct-risk-proof .label b { color: var(--text); font-weight: 700; }
+.ct-risk-para { font-size: 16px; line-height: 1.7; color: var(--text-2); max-width: none; margin-top: 2rem; }
+
+.ct-why { margin-top: 2rem; }
+.ct-why > summary {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: 11px 18px; border: 1px solid var(--bdr); border-radius: 999px;
+  font-family: inherit; font-size: 15px; font-weight: 600; color: var(--text-2);
+  cursor: pointer; list-style: none; -webkit-user-select: none; user-select: none;
+  transition: color .2s, border-color .2s, background .2s;
+}
+.ct-why > summary::-webkit-details-marker { display: none; }
+.ct-why > summary::marker { content: ""; }
+.ct-why > summary:hover { color: var(--text); border-color: #d5d7dd; background: var(--bg-2); }
+.ct-why > summary:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+.ct-why[open] > summary { color: var(--text); }
+.ct-why-arr { font-size: 11px; line-height: 1; color: var(--text-3); transition: transform .25s ease; }
+.ct-why[open] .ct-why-arr { transform: rotate(180deg); }
+.ct-why .ct-risk-para { margin-top: 1.25rem; }
+.ct-risk-note { font-size: 14px; color: var(--text-3); line-height: 1.5; }
+
+@media (max-width: 720px) {
+  
+  .ct-price-example { padding: 1.15rem 1.25rem; }
+  .ct-price-example .pe-op { display: none; }
+  .ct-price-example .pe-row { flex-direction: column; align-items: stretch; gap: .85rem; }
+  .ct-price-example .pe-item { flex-direction: row; justify-content: space-between; align-items: baseline; gap: 1rem; }
+  .ct-price-example .pe-cap { flex: 1; }
+  .ct-price-example .pe-val { font-size: 18px; }
+  .ct-price-example .pe-item:last-child { margin-top: .2rem; padding-top: .85rem; border-top: 1px solid var(--bdr); }
+  .ct-price-example .pe-val.accent { font-size: 20px; }
+  .ct-risk-proof { max-width: 100%; gap: 1rem 1.5rem; margin-top: 2rem; padding: 1.5rem 0; }
+  .ct-risk-proof .num { letter-spacing: -.02em; }
+  .ct-risk-proof .label { min-width: 0; }
+}
+
+/* WHAT COUNTS AS A LEAD (presentation style) */
+.ct-lead-callout { border-left: 3px solid var(--purple); padding: .1rem 0 .1rem 1.35rem; margin: 0 0 2.25rem; font-size: 19px; color: var(--text-2); line-height: 1.6; max-width: 780px; }
+.ct-lead-callout b { color: var(--text); font-weight: 800; }
+.ct-lead-subhead { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--purple); margin: 0 0 .5rem; }
+.ct-lead-types { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--bdr); }
+.ct-lead-type { display: flex; align-items: center; gap: .9rem; padding: 1.15rem 0; border-bottom: 1px solid var(--bdr); font-size: 15px; color: var(--text); }
+.ct-lead-type svg { width: 24px; height: 24px; color: var(--purple); flex-shrink: 0; }
+.ct-lead-type:nth-child(odd) { padding-right: 2rem; }
+.ct-lead-type:nth-child(even) { padding-left: 2rem; border-left: 1px solid var(--bdr); }
+
+/* NICHES */
+.ct-niches-note {
+  margin-top: 1.75rem; font-size: 15px; color: var(--text-2); line-height: 1.6;
+  background: var(--purple-lt); border-left: 3px solid var(--purple);
+  border-radius: 12px; padding: 1rem 1.25rem;
+}
+.ct-niches-note strong { color: var(--text); font-weight: 700; }
+
+/* TIMELINE */
+.ct-timeline { margin-top: 2rem; }
+.ct-tl-item { display: flex; gap: 1.25rem; padding: 1rem 0; border-bottom: 1px solid var(--bdr); align-items: flex-start; }
+.ct-tl-item:last-child { border-bottom: none; }
+.ct-tl-day { min-width: 84px; font-size: 12px; font-weight: 700; color: var(--purple); padding-top: 2px; }
+.ct-tl-item h3 { font-size: 15px; font-weight: 600; margin-bottom: .2rem; }
+.ct-tl-item p { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+
+
+.ct-faq { margin-top: 2rem; }
+.ct-faq-item { border-bottom: 1px solid var(--bdr); }
+.ct-faq-item:last-child { border-bottom: none; }
+.ct-faq-q {
+  width: 100%; background: none; border: none; padding: 1.1rem 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  font-family: inherit; font-size: 16px; font-weight: 600; color: var(--text);
+  text-align: left; cursor: pointer;
+}
+.ct-faq-q:hover { color: var(--purple); }
+.ct-faq-arr { color: var(--purple); flex-shrink: 0; transition: transform .25s; font-size: 13px; }
+.ct-faq-item.open .ct-faq-arr { transform: rotate(180deg); }
+.ct-faq-a { font-size: 14px; color: var(--text-2); line-height: 1.7; padding: 0 0 1.2rem; }
+.ct-faq-a p + p { margin-top: .7rem; }
+.ct-faq-more-btn {
+  display: block; width: 100%; margin: 1.2rem auto;
+  background: transparent; color: var(--purple);
+  border: 1px solid rgba(91,75,216,.28); border-radius: 999px;
+  padding: 12px 24px; font-size: 14px; font-weight: 600;
+  font-family: inherit; cursor: pointer; transition: all .2s;
+}
+.ct-faq-more-btn:hover { border-color: var(--purple); background: rgba(91,75,216,.05); }
+
+.ct-faq-more-btn[hidden] { display: none; }
+
+/* CTA FORM */
+.ct-cta-section {
+  background: var(--purple);
+  padding: 5rem 0;
+}
+.ct-cta-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.ct-cta-left h2 { color: #fff; font-size: 36px; font-weight: 700; margin-bottom: .75rem; letter-spacing: -.01em; }
+.ct-cta-left p { color: rgba(255,255,255,.75); font-size: 16px; line-height: 1.7; margin-bottom: 1.5rem; }
+.ct-contacts-col { display: flex; flex-direction: column; gap: .6rem; }
+.ct-contact-item,
+.ct-contact-item:link,
+.ct-contact-item:visited { display: flex; align-items: center; gap: .4rem; color: #fff !important; font-size: 14px; text-decoration: none; }
+.ct-contact-item:hover { color: #fff !important; }
+.ct-cta-btn,
+.ct-cta-btn:link,
+.ct-cta-btn:visited {
+  display: inline-flex; align-items: center; gap: .55rem;
+  margin-top: 1.75rem; align-self: flex-start;
+  background: #fff; color: var(--purple) !important;
+  padding: 13px 26px; border-radius: var(--radius);
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12); transition: opacity .2s, transform .15s;
+}
+.ct-cta-btn:hover { opacity: .92; transform: translateY(-1px); }
+
+.ct-form {
+  background: #fff; border-radius: var(--radius-lg);
+  padding: 2rem; box-shadow: 0 12px 48px rgba(0,0,0,.15);
+}
+.ct-form h3 { font-size: 18px; font-weight: 700; margin-bottom: 1.25rem; color: var(--text); }
+.ct-field { margin-bottom: 1rem; }
+.ct-field label { display: block; font-size: 13px; font-weight: 500; margin-bottom: .35rem; color: var(--text-2); }
+.ct-field input, .ct-field textarea {
+  width: 100%; border: 1px solid var(--bdr);
+  border-radius: var(--radius); padding: .65rem .85rem;
+  font-size: 14px; font-family: inherit; color: var(--text);
+  background: var(--bg); outline: none;
+  transition: border-color .2s;
+}
+.ct-field input:focus, .ct-field textarea:focus { border-color: var(--purple); }
+.ct-field textarea { resize: vertical; min-height: 80px; }
+.ct-form-btn {
+  width: 100%; background: var(--purple); color: #fff;
+  border: none; border-radius: var(--radius);
+  padding: 14px; font-size: 15px; font-weight: 600;
+  cursor: pointer; transition: opacity .2s;
+  font-family: inherit;
+}
+.ct-form-btn:hover { opacity: .88; }
+
+/* FOOTER */
+.ct-footer {
+  padding: 2rem;
+  border-top: 1px solid var(--bdr);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+  font-size: 13px; color: var(--text-3);
+}
+.ct-footer a { color: var(--text-3); text-decoration: none; }
+.ct-footer a:hover { color: var(--purple); }
+.ct-footer-links { display: flex; gap: 1.5rem; }
+
+
+.ct-prob-ico { font-size: 26px; line-height: 1; margin-bottom: .6rem; }
+
+
+.ct-more-link {
+  margin-top: .85rem; background: none; border: none; padding: 0;
+  font-family: inherit; font-size: 13px; font-weight: 600; color: var(--purple);
+  cursor: pointer; display: inline-flex; align-items: center; gap: .35rem;
+}
+.ct-more-link:hover { text-decoration: underline; }
+.ct-more-arr { font-size: 10px; transition: transform .2s; }
+.ct-more-link.open .ct-more-arr { transform: rotate(180deg); }
+.ct-ben-collapse { font-size: 14px; color: var(--text-2); line-height: 1.6; margin-top: .6rem; }
+
+
+.ct-niche-list { columns: 2; column-gap: 2.5rem; margin-top: 1.5rem; }
+.ct-niche-list li {
+  list-style: none; font-size: 15px; color: var(--text);
+  padding: .5rem 0; break-inside: avoid;
+  display: flex; align-items: center; gap: .8rem;
+}
+.ct-niche-list li > svg { width: 22px; height: 22px; color: var(--purple); flex-shrink: 0; }
+.ct-niche-more {
+  display: none; margin-top: 1rem; background: none; border: none; padding: 0;
+  font-family: inherit; font-size: 14px; font-weight: 600; color: var(--purple);
+  cursor: pointer; align-items: center; gap: .4rem;
+}
+.ct-niche-more .arr { font-size: 10px; transition: transform .2s; }
+.ct-niche-more.open .arr { transform: rotate(180deg); }
+
+
+.ct-lead-carousel { margin-top: 2rem; }
+.ct-viewport { overflow: hidden; }
+.ct-lead-track {
+  display: flex; gap: 20px; will-change: transform;
+}
+.ct-lead-card {
+  flex: 0 0 calc(50% - 10px); min-width: calc(50% - 10px);
+  scroll-snap-align: start;
+  background: none; border: none; border-radius: 0; padding: 0;
+  display: flex; flex-direction: column;
+}
+.ct-lead-card .lc-lbl { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--purple); margin-bottom: .4rem; line-height: 1.35; }
+.ct-lead-card .lc-sphere { font-size: 14px; font-style: italic; color: var(--text-3); margin-bottom: .9rem; }
+.ct-lead-card .lc-mail {
+  background: #fff; border: 1px solid var(--bdr); border-radius: 16px;
+  overflow: hidden; box-shadow: 0 12px 30px rgba(15,23,42,.06);
+}
+.ct-lead-card .lc-subject { padding: 1.1rem 1.35rem; font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.35; border-bottom: 1px solid var(--bdr); }
+.ct-lead-card .lc-head { display: flex; align-items: flex-start; gap: .7rem; padding: 1rem 1.35rem .35rem; }
+.ct-lead-card .lc-ava { width: 38px; height: 38px; border-radius: 50%; background: var(--purple); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ct-lead-card .lc-meta { flex: 1; min-width: 0; }
+.ct-lead-card .lc-name { font-size: 14px; font-weight: 700; color: var(--text); }
+.ct-lead-card .lc-addr { font-size: 13px; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ct-lead-card .lc-time { font-size: 12px; color: var(--text-3); flex-shrink: 0; padding-top: 2px; }
+.ct-lead-card .lc-body { padding: .6rem 1.35rem 1.35rem; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.ct-lead-card .lc-mail .ct-delay { font-size: 12px; color: var(--purple); font-weight: 700; margin: 0 0 .2rem; padding: .85rem 1.35rem 0; border-top: 1px dashed var(--bdr); }
+.ct-lead-card .lc-mail .lc-sign { margin-top: .95rem; font-size: 13px; color: var(--text-3); line-height: 1.5; }
+.ct-lead-card .lc-res { margin-top: 1.1rem; font-size: 15px; color: var(--text-2); line-height: 1.6; }
+.ct-lead-card .lc-relay { font-size: 13px; font-style: italic; color: var(--text-3); padding: .7rem 1.35rem; border-bottom: 1px solid var(--bdr); line-height: 1.5; }
+.ct-lead-card .lc-res strong { color: var(--text); }
+.ct-lead-ctrl { display: flex; gap: 10px; margin-top: 1.25rem; }
+.ct-lead-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #fff; border: 1px solid var(--bdr); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text); transition: all .2s; font-size: 18px; line-height: 1;
+}
+.ct-lead-btn:hover { background: var(--purple); border-color: var(--purple); color: #fff; }
+.ct-lead-hint { font-size: 12px; color: var(--text-3); margin-top: .75rem; }
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  
+  .ct-nav-links { display: none; }
+  .ct-burger { display: flex; }
+  .ct-hero h1 { font-size: 44px; }
+  .ct-hero-inner { display: block; }
+  .ct-hero-left { max-width: 760px; }
+  .ct-mailcard { display: none; }
+  .ct-hero-partner { margin-top: 2.25rem; }
+  
+  .ct-hero-left .ct-hero-cta { display: none; }
+  .ct-hero-cta-mobile { display: flex; margin-top: 2.5rem; }
+  .ct-proc-grid, .ct-proc-grid.cols-4 { grid-template-columns: 1fr 1fr; gap: 2.25rem 0; }
+  .ct-proc-col { padding: 0 1.5rem; border-left: 1px solid var(--bdr); }
+  .ct-proc-col:nth-child(odd) { padding-left: 0; border-left: none; }
+  .ct-proc-col h3, .ct-proc-grid.cols-4 .ct-proc-col h3 { min-height: 0; margin-bottom: 1rem; }
+  .ct-tech-grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 2.5rem; }
+  .ct-tech-visual, .ct-tech-text, .ct-tech-cta { grid-column: auto; grid-row: auto; align-self: stretch; }
+  .ct-tech-text { border-left: none; padding-left: 0; }
+}
+@media (max-width: 720px) {
+  .ct-niche-list { columns: 1; }
+  .ct-niche-more { display: inline-flex; }
+  .ct-niche-list.collapsed .ct-niche-extra { display: none; }
+  .ct-carousel-arrow { width: 38px; height: 38px; font-size: 20px; }
+  .ct-carousel-arrow.prev { left: 0; }
+  .ct-carousel-arrow.next { right: 0; }
+  .ct-lead-card { flex: 0 0 86%; min-width: 86%; }
+  .ct-cases-track .ct-case-card { flex: 0 0 86%; min-width: 86%; }
+  .ct-hero h1 { font-size: 34px; }
+  .ct-hero-cta { flex-direction: column; align-items: stretch; margin-top: 1.75rem; }
+  .ct-hero-cta .ct-cta-primary { width: 100%; }
+  .ct-tech-cta { flex-direction: column; align-items: stretch; }
+  .ct-tech-cta .ct-cta-primary { width: 100%; }
+  .ct-h2 { font-size: 26px; }
+  .ct-proc-grid, .ct-proc-grid.cols-4 { grid-template-columns: 1fr; gap: 1.75rem 0; }
+  .ct-proc-col, .ct-proc-col:nth-child(odd) { padding: 0; border-left: none; }
+  .ct-lead-types { grid-template-columns: 1fr; }
+  .ct-lead-type:nth-child(odd) { padding-right: 0; }
+  .ct-lead-type:nth-child(even) { padding-left: 0; border-left: none; }
+  .ct-hero-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem 0; }
+  .ct-hstat { padding: 0 1.25rem; }
+  .ct-hstat:nth-child(odd) { padding-left: 0; border-left: none; }
+  .ct-vol-boxes { grid-template-columns: 1fr 1fr; gap: 1.75rem 0; }
+  .ct-vol-box { padding: 0 1.25rem; }
+  .ct-vol-box:nth-child(odd) { padding-left: 0; border-left: none; }
+  .ct-vol-box .vnum { font-size: 38px; }
+  .ct-pricing-wrap { flex-direction: column; align-items: stretch; gap: 1.75rem 0; }
+  .ct-price-card, .ct-price-card:first-child, .ct-price-card:last-child { padding: 0; }
+  .ct-price-plus-wrap { justify-content: center; padding: 0; }
+  .ct-price-val { font-size: 30px; }
+  .ct-pres-grid { grid-template-columns: 1fr; }
+  .ct-cta-inner { grid-template-columns: 1fr; }
+  .ct-tech-avatar { width: 74px; height: 74px; }
+  .ct-tech-avatar > svg { width: 34px; height: 34px; }
+  .ct-tech-compare { gap: .7rem; }
+  .ct-tech-mailgrid { gap: 6px; }
+  .ct-tech-mail { width: 32px; height: 32px; }
+  .ct-tech-mail svg { width: 16px; height: 16px; }
+  .ct-tech-nums { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .ct-tech-num-col .big { font-size: 18px; margin-top: .5rem; white-space: nowrap; }
+  .ct-tech-num-col .lbl { font-size: 12.5px; }
+  .ct-tech-num-col .sub { font-size: 11px; }
+  .ct-nav { padding: 0 .9rem; }
+  .ct-nav-logo { font-size: 15px; gap: 8px; }
+  .ct-nav-actions { gap: 6px; }
+  .ct-nav-actions .ct-cta-primary { padding: 8px 11px; font-size: 12px; }
+  .ct-burger { width: 34px; height: 34px; }
+  .ct-container { padding: 0 1.25rem; }
+  .ct-section { padding: 3rem 0; }
+  .ct-hero { padding: 2.5rem 0 3rem; }
+
+  
+  .ct-mobcar .ct-viewport { overflow: hidden; }
+  .ct-mobcar .ct-carousel-arrow {
+    display: flex; width: 30px; height: 30px; font-size: 16px;
+    opacity: .45; background: rgba(255,255,255,.65);
+    box-shadow: 0 2px 8px rgba(83,74,183,.10); border-color: transparent;
+  }
+  .ct-mobcar .ct-carousel-arrow:hover { opacity: .9; }
+  .ct-mobcar .ct-prob-grid { display: flex; flex-wrap: nowrap; grid-template-columns: none; gap: 20px; margin-top: 2rem; }
+  .ct-mobcar .ct-prob-grid .ct-prob-card { flex: 0 0 86%; min-width: 86%; }
+
+  
+  .ct-proc-grid:not(.cols-4) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+  .ct-proc-grid:not(.cols-4) .ct-proc-col,
+  .ct-proc-grid:not(.cols-4) .ct-proc-col:nth-child(odd) {
+    padding: 1.25rem; border-left: none;
+    background: var(--bg-2); border: 1px solid var(--bdr); border-radius: var(--radius-lg);
+  }
+  .ct-proc-grid:not(.cols-4) .ct-proc-col h3 { min-height: 0; margin-bottom: .6rem; }
+  .ct-proc-grid:not(.cols-4) .ct-proc-col .ct-ico { margin-bottom: 1rem; }
+  .ct-proc-grid:not(.cols-4) .ct-proc-col h3,
+  .ct-proc-grid:not(.cols-4) .ct-proc-col p {
+    overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto;
+  }
+}
+
+.ct-cli-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.ct-cli-card {
+  background: var(--bg); border: 1px solid var(--bdr); border-radius: var(--radius-lg);
+  padding: 1.4rem 1rem 1.1rem; display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start; gap: 1.7rem;
+  transition: border-color .15s, box-shadow .15s;
+}
+.ct-cli-card:hover { border-color: var(--purple-mid); box-shadow: 0 8px 20px rgba(91,75,216,.08); }
+
+.ct-cli-logo {
+  font-size: 42px; height: 1em; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ct-cli-mark {
+  position: relative; display: block; overflow: hidden; max-width: 100%;
+  filter: grayscale(1); opacity: .62; transition: filter .2s, opacity .2s;
+}
+.ct-cli-mark img { position: absolute; display: block; height: auto; max-width: none; }
+.ct-cli-card:hover .ct-cli-mark { filter: grayscale(0); opacity: 1; }
+.ct-cli-sphere {
+  font-size: 12px; line-height: 1.35; font-weight: 500;
+  color: var(--text-3); text-align: center;
+}
+
+
+.ct-cli-sep { border: none; border-top: 1px solid var(--bdr); margin: 3rem 0 2rem; }
+.ct-cli-ind-title {
+  font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--text-3); text-align: center; margin-bottom: 1.25rem;
+}
+.ct-cli-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.ct-cli-tag {
+  background: var(--purple-lt); border-radius: 20px; padding: 6px 15px;
+  font-size: 13px; color: var(--purple); font-weight: 500; white-space: nowrap;
+}
+.ct-cli-hidden { display: none; }
+.ct-cli-hidden.open { display: contents; }
+.ct-cli-btn {
+  display: flex; align-items: center; gap: 6px; margin: 1.5rem auto 0;
+  background: transparent; border: 1.5px solid var(--bdr); border-radius: 30px;
+  padding: 10px 24px; font-size: 13px; color: var(--purple); font-weight: 600;
+  cursor: pointer; font-family: inherit; transition: background .15s, border-color .15s;
+}
+.ct-cli-btn:hover { background: var(--purple-lt); border-color: var(--purple-mid); }
+.ct-cli-chevron { transition: transform .2s; display: inline-flex; align-items: center; justify-content: center; }
+.ct-cli-chevron svg { width: 14px; height: 14px; display: block; }
+.ct-cli-chevron.open { transform: rotate(180deg); }
+
+
+@media (max-width: 900px) {
+  .ct-cli-grid { grid-template-columns: repeat(3, 1fr); }
+  .ct-cli-logo { font-size: 36px; }
+}
+@media (max-width: 560px) {
+  .ct-cli-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .ct-cli-card { padding: 1.1rem .75rem .9rem; gap: 1.25rem; }
+  .ct-cli-logo { font-size: 30px; }
+  .ct-cli-sphere { font-size: 11px; }
+  .ct-cli-tag { font-size: 12px; padding: 5px 12px; white-space: normal; }
+}
+
+
+
+
+.ct-link-row { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .75rem 2rem; align-items: center; }
+.ct-link-arrow, .ct-link-arrow:link, .ct-link-arrow:visited {
+  font-size: 16px; font-weight: 700; color: var(--purple); text-decoration: none;
+  border-bottom: 1px solid rgba(91,75,216,.3); padding-bottom: 2px; transition: border-color .2s;
+}
+.ct-link-arrow:hover { border-bottom-color: var(--purple); }
+.ct-inline-link, .ct-inline-link:link, .ct-inline-link:visited { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+
+
+.ct-steps { list-style: none; counter-reset: ctstep; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; margin-top: 2rem; border-top: 1px solid var(--bdr); }
+.ct-steps li { counter-increment: ctstep; position: relative; padding: 1.1rem 0 1.1rem 3rem; border-bottom: 1px solid var(--bdr); font-size: 15px; color: var(--text-2); line-height: 1.55; }
+.ct-steps li::before {
+  content: counter(ctstep, decimal-leading-zero); position: absolute; left: 0; top: 1.05rem;
+  width: 2.1rem; font-size: 14px; font-weight: 800; color: var(--purple);
+}
+.ct-steps li b { color: var(--text); font-weight: 700; }
+
+
+.ct-mcases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 2rem; }
+.ct-mcases.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 820px; }
+.ct-mcase { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--bdr); border-radius: var(--radius-lg); padding: 1.5rem 1.6rem; transition: box-shadow .2s, border-color .2s; }
+.ct-mcase:hover { border-color: var(--purple-mid); box-shadow: 0 6px 24px rgba(83,74,183,.08); }
+.ct-mcase-niche { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin-bottom: .4rem; }
+.ct-mcase h3 { font-size: 18px; font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
+.ct-mcase-nums { display: flex; gap: 1.75rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--bdr); }
+.ct-mcase-nums b { display: block; font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15; color: var(--text); }
+.ct-mcase-nums span { font-size: 13px; color: var(--text-3); }
+.ct-mcase-link, .ct-mcase-link:link, .ct-mcase-link:visited { margin-top: 1.1rem; font-size: 14px; font-weight: 600; color: var(--purple); text-decoration: none; }
+.ct-mcase-link:hover { text-decoration: underline; }
+
+
+.ct-cmp-wrap { margin-top: 2rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ct-cmp { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.ct-cmp th, .ct-cmp td { text-align: left; vertical-align: top; padding: 1rem 1.25rem; border-bottom: 1px solid var(--bdr); }
+.ct-cmp thead th { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); border-bottom: 2px solid var(--text); }
+.ct-cmp thead th.is-ours { color: var(--purple); }
+.ct-cmp tbody th { font-weight: 700; color: var(--text); width: 22%; padding-left: 0; }
+.ct-cmp td { color: var(--text-2); width: 39%; }
+.ct-cmp td.is-ours { color: var(--text); background: var(--purple-lt); }
+
+
+.ct-chain { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 2rem; }
+.ct-chain-mail { background: #fff; border: 1px solid var(--bdr); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.ct-chain-top { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding: .9rem 1.25rem; background: var(--bg-2); border-bottom: 1px solid var(--bdr); }
+.ct-chain-step { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); }
+.ct-chain-day { font-size: 13px; color: var(--text-3); }
+.ct-chain-subj { padding: 1rem 1.25rem 0; font-size: 15px; font-weight: 700; color: var(--text); }
+.ct-chain-body { padding: .6rem 1.25rem 1.1rem; font-size: 14.5px; color: var(--text-2); line-height: 1.6; }
+.ct-chain-body p { margin-bottom: .6rem; }
+.ct-chain-body p:last-child { margin-bottom: 0; }
+.ct-chain-why { margin-top: auto; padding: .85rem 1.25rem; border-top: 1px dashed var(--bdr); font-size: 13px; color: var(--text-3); line-height: 1.5; }
+.ct-chain-why b { color: var(--text); font-weight: 700; }
+.ct-note { font-size: 13px; color: var(--text-3); margin-top: 1rem; line-height: 1.6; }
+
+
+.ct-reads { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 2rem; }
+.ct-read, .ct-read:link, .ct-read:visited {
+  display: flex; flex-direction: column; gap: .5rem; padding: 1.35rem 1.4rem; border: 1px solid var(--bdr); border-radius: var(--radius);
+  background: #fff; color: var(--text); text-decoration: none; transition: border-color .2s, box-shadow .2s;
+}
+.ct-read:hover { border-color: var(--purple-mid); box-shadow: 0 6px 24px rgba(83,74,183,.08); }
+.ct-read-tag { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); }
+.ct-read-title { font-size: 16px; font-weight: 700; line-height: 1.35; }
+.ct-read-desc { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+
+
+.ct-process .ct-tl-item { padding: 1.25rem 0; gap: 1.75rem; }
+.ct-process .ct-tl-day { min-width: 110px; font-size: 13px; }
+.ct-process .ct-tl-item h3 { font-size: 17px; font-weight: 700; margin-bottom: .35rem; }
+.ct-process .ct-tl-item p { font-size: 15px; line-height: 1.6; max-width: 760px; }
+
+
+.ct-checklist { list-style: none; margin-top: 1.75rem; max-width: 820px; }
+.ct-checklist li { position: relative; padding: .55rem 0 .55rem 2rem; font-size: 15px; color: var(--text-2); line-height: 1.6; }
+.ct-checklist li::before { content: "✓"; position: absolute; left: 0; top: .5rem; font-weight: 800; color: var(--teal); }
+.ct-subhead { font-size: 18px; font-weight: 800; margin-top: 2.5rem; }
+
+
+.ct-ben-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 960px) {
+  .ct-ben-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+  .ct-mcases { grid-template-columns: 1fr 1fr; }
+  .ct-chain { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  
+  .ct-cmp { min-width: 0; }
+  .ct-cmp thead { display: none; }
+  .ct-cmp, .ct-cmp tbody, .ct-cmp tr, .ct-cmp th, .ct-cmp td { display: block; width: 100%; }
+  .ct-cmp tr { padding: 1rem 0; border-bottom: 1px solid var(--bdr); }
+  .ct-cmp tbody th, .ct-cmp td { padding: 0; border: 0; width: 100%; }
+  .ct-cmp tbody th { margin-bottom: .5rem; }
+  .ct-cmp td { font-size: 14px; padding: .55rem .8rem; border-radius: 10px; }
+  .ct-cmp td::before { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .15rem; color: var(--text-3); content: "Mass email"; }
+  .ct-cmp td.is-ours { margin-top: .4rem; }
+  .ct-cmp td.is-ours::before { content: "Email outreach"; color: var(--purple); }
+  .ct-ben-grid.cols-3 { grid-template-columns: 1fr; }
+  .ct-steps { grid-template-columns: 1fr; }
+  .ct-mcases, .ct-mcases.cols-2 { grid-template-columns: 1fr; }
+  .ct-process .ct-tl-item { flex-direction: column; gap: .35rem; }
+}
+</style>
+
+<div class="ct-page">
+
+  <!-- NAV -->
+  <nav class="ct-nav">
+    <a href="/" class="ct-nav-logo">
+      <div class="ct-nav-bubble">
+        <svg viewBox="0 0 20 20"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6l-4 4V4z" /></svg>
+      </div>
+      Plemio
+    </a>
+    <div class="ct-nav-links">
+      <a href="#how">How it works</a>
+      <a href="#prices">Pricing</a>
+      <a href="#cases">Cases</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="ct-nav-actions">
+      <a href="#discuss" class="ct-cta-primary">Book a call</a>
+      <button class="ct-burger" aria-label="Menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="ct-mobile-menu" id="mobileMenu" hidden>
+      <a href="#how" onclick="closeMenu()">How it works</a>
+      <a href="#prices" onclick="closeMenu()">Pricing</a>
+      <a href="#cases" onclick="closeMenu()">Cases</a>
+      <a href="#faq" onclick="closeMenu()">FAQ</a>
+    </div>
+  </nav>
+  <div class="ct-nav-spacer"></div>
+  <script>
+  
+  (function(){
+    function moveNav(){
+      var nav = document.querySelector('.ct-nav');
+      if (nav && nav.parentNode !== document.body) document.body.appendChild(nav);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', moveNav);
+    else moveNav();
+  })();
+  </script>
+
+  <!-- HERO -->
+  <section class="ct-hero">
+    <div class="ct-container">
+      <div class="ct-hero-inner">
+        <div class="ct-hero-left">
+          <h1>B2B leads.<br>Pay only<br><em>for results</em></h1>
+          <p class="ct-hero-sub">Through cold email outreach: we build your list of target companies, write the emails and run the campaigns — you pay for warm leads.</p>
+          <div class="ct-cta-group ct-hero-cta">
+            <a href="#discuss" class="ct-cta-primary">Book a call</a>
+          </div>
+        </div>
+
+        <div class="ct-hero-right">
+          <div class="ct-mailcard" aria-label="A prospect’s reply to our email">
+            <div class="ct-mail-meta">
+              <div class="val">From: <span class="ct-mailredact ct-redact-sm"></span> Kate Morgan &lt;k.morgan<span class="ct-mailredact ct-redact-md"></span>a-gas.com&gt;</div>
+              <div class="val">To: alex.sid<span class="ct-mailredact ct-redact-lg"></span>&gt;</div>
+            </div>
+            <div class="ct-mail-body">
+              <p>Hi Alex,<br>Thanks for your email (see below).<br>I’d be happy to discuss your company’s proposal next week.<br>My contact details are in the signature below.</p>
+              <p>Have a great day.<br>Best regards,<br><span class="ct-mailredact ct-redact-sm"></span> Kate Morgan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ct-hero-stats">
+        <div class="ct-hstat"><div class="num">Pay</div><div class="desc">per lead only</div></div>
+        <div class="ct-hstat"><div class="num">10–14 days</div><div class="desc">to first leads</div></div>
+        <div class="ct-hstat"><div class="num">from $35</div><div class="desc">per lead</div></div>
+        <div class="ct-hstat"><div class="num">60+</div><div class="desc">clients served</div></div>
+      </div>
+
+      <div class="ct-cta-group ct-hero-cta ct-hero-cta-mobile">
+        <a href="#discuss" class="ct-cta-primary">Book a call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">Our clients</div>
+      <h2 class="ct-h2">Trusted by companies in 60+ industries</h2>
+      <p class="ct-lead" style="margin-bottom:2.5rem;">From small businesses to large manufacturers. From B2B SaaS to wholesale distributors.</p>
+
+      <div class="ct-cli-grid">
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:3.3em;aspect-ratio:5.52"><img src="https://optim.tildacdn.com/tild3264-3034-4635-b334-663039613231/-/format/webp/gviskvar.jpg.webp" alt="Gviskar" style="width:100%;left:0%;top:-4.31%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">Custom software development</span>
+        </div>
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:1.45em;aspect-ratio:1.78"><img src="https://optim.tildacdn.com/tild3138-3739-4530-a166-653764613866/-/format/webp/1_1new2.png.webp" alt="1+1" style="width:243.81%;left:-70.48%;top:-21.61%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">Business networking</span>
+        </div>
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:3.3em;aspect-ratio:4.17"><img src="https://static.tildacdn.com/tild3237-3563-4139-b536-336363323333/gogym-logo-b.svg" alt="Gogym" style="width:100%;left:0%;top:0%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">Corporate fitness</span>
+        </div>
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:2.15em;aspect-ratio:2.85"><img src="https://optim.tildacdn.com/tild3131-3839-4638-b632-616332353363/-/format/webp/aiesa-new2.png.webp" alt="Aiesa" style="width:152.2%;left:-29.25%;top:-55.59%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">AI speech recognition</span>
+        </div>
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:3.3em;aspect-ratio:5.29"><img src="https://static.tildacdn.com/tild3932-3963-4134-b065-373461613032/komma.svg" alt="Komma" style="width:100%;left:0%;top:0%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">Team messaging & video calls</span>
+        </div>
+        <div class="ct-cli-card">
+          <div class="ct-cli-logo">
+            <span class="ct-cli-mark" style="width:2.25em;aspect-ratio:2.25"><img src="https://optim.tildacdn.com/tild3734-3134-4131-b938-363965303066/-/format/webp/Group_2747.png.webp" alt="PP Rolled" style="width:100.06%;left:-0.06%;top:-0.27%" loading="lazy"></span>
+          </div>
+          <span class="ct-cli-sphere">Roofing equipment</span>
+        </div>
+      </div>
+
+      <hr class="ct-cli-sep">
+
+      <div class="ct-cli-ind-title">More industries we’ve worked in</div>
+
+      <div class="ct-cli-tags">
+        <span class="ct-cli-tag">Edtech</span>
+        <span class="ct-cli-tag">Niche perfumery</span>
+        <span class="ct-cli-tag">Beverage manufacturer</span>
+        <span class="ct-cli-tag">Marketing agency</span>
+        <span class="ct-cli-tag">Natural stone supplier</span>
+        <span class="ct-cli-tag">Steel fabrication plant</span>
+        <span class="ct-cli-tag">Management consulting</span>
+        <span class="ct-cli-tag">Workplace safety</span>
+        <span class="ct-cli-tag">Business development</span>
+        <span class="ct-cli-tag">Cargo insurance</span>
+        <span class="ct-cli-tag">AI training</span>
+        <div class="ct-cli-hidden" id="cliHiddenTags">
+          <span class="ct-cli-tag">Software development</span>
+          <span class="ct-cli-tag">Corporate health insurance</span>
+          <span class="ct-cli-tag">Coffee roaster</span>
+          <span class="ct-cli-tag">Cloud services for business</span>
+          <span class="ct-cli-tag">Medical equipment</span>
+          <span class="ct-cli-tag">Building materials supply</span>
+          <span class="ct-cli-tag">Freight logistics</span>
+          <span class="ct-cli-tag">Content studio</span>
+          <span class="ct-cli-tag">Auto parts distributor</span>
+          <span class="ct-cli-tag">Analytics for marketplace sellers</span>
+          <span class="ct-cli-tag">Generator manufacturer</span>
+          <span class="ct-cli-tag">Healthcare sales analytics</span>
+          <span class="ct-cli-tag">Meat supply</span>
+          <span class="ct-cli-tag">Floristry</span>
+          <span class="ct-cli-tag">Manufacturing consumables</span>
+        </div>
+      </div>
+
+      <button class="ct-cli-btn" type="button" onclick="toggleCliTags()">
+        <span id="cliBtnLabel">Show more</span>
+        <span class="ct-cli-chevron" id="cliChevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-coral">THE PROBLEM</div>
+      <h2 class="ct-h2">Sound familiar?</h2>
+      <p style="font-size:15px;color:var(--text-2);margin-bottom:2rem;">What keeps you from reaching new B2B clients:</p>
+      <div class="ct-mobcar">
+      <div class="ct-carousel-wrap">
+        <button class="ct-carousel-arrow prev" aria-label="Previous" onclick="scrollProb(-1)">‹</button>
+        <button class="ct-carousel-arrow next" aria-label="Next" onclick="scrollProb(1)">›</button>
+        <div class="ct-viewport">
+      <div class="ct-prob-grid" id="probTrack">
+        <div class="ct-prob-card">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3 2"/></svg></div>
+          <div style="display:inline-block;font-weight:700;color:var(--purple);font-size:12px;margin-bottom:.5rem;">01</div>
+          <h3>Reps spend up to 4 hours a day hunting for contacts</h3>
+          <p>At a $5,000 salary, that’s ~$2,500 a month paid for searching instead of selling.</p>
+        </div>
+        <div class="ct-prob-card">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 4h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 12"/><path d="M22 2L2 22"/></svg></div>
+          <div style="display:inline-block;font-weight:700;color:var(--purple);font-size:12px;margin-bottom:.5rem;">02</div>
+          <h3>100 cold calls, 5 conversations</h3>
+          <p>B2B cold calling converts at 2–5%. 95 out of 100 attempts go nowhere.</p>
+        </div>
+        <div class="ct-prob-card">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l2.5-7h11L20 13"/><path d="M4 13v5h16v-5h-5a3 3 0 0 1-6 0H4z"/></svg></div>
+          <div style="display:inline-block;font-weight:700;color:var(--purple);font-size:12px;margin-bottom:.5rem;">03</div>
+          <h3>Mass email blasts get &lt;0.5% opens</h3>
+          <p>Gmail and Outlook filter bulk email before it reaches the inbox. Your domain ends up on blocklists.</p>
+        </div>
+        <div class="ct-prob-card">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M16.5 7.5c0-1.7-2-3-4.5-3s-4.5 1.3-4.5 3 2 2.6 4.5 3 4.5 1.3 4.5 3-2 3-4.5 3-4.5-1.3-4.5-3"/></svg></div>
+          <div style="display:inline-block;font-weight:700;color:var(--purple);font-size:12px;margin-bottom:.5rem;">04</div>
+          <h3>Paid search is pricey and misses decision-makers</h3>
+          <p>A B2B click costs $5–50 and a lead often tops $300. And you never know who filled in the form: the CEO or an intern.</p>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="ct-section" id="how">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">HOW IT WORKS</div>
+      <h2 class="ct-h2">How we bring you B2B clients</h2>
+      <p class="ct-lead">Leads come from cold email outreach — personal emails to decision-makers. We run everything end to end, and you step in once a prospect has replied.</p>
+      <div class="ct-proc-grid cols-4">
+        <div class="ct-proc-col">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div>
+          <div class="ct-proc-num">01</div>
+          <h3>We define<br>who to target</h3>
+          <p>Industry, company size, region and decision-maker role — matched to your product.</p>
+        </div>
+        <div class="ct-proc-col">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+          <div class="ct-proc-num">02</div>
+          <h3>We build a list<br>of decision-makers</h3>
+          <p>We source the data ourselves — no contact hunting on your side.</p>
+        </div>
+        <div class="ct-proc-col">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L3 11l6 2 2 6 10-15z"/><path d="M9 13l3-2"/></svg></div>
+          <div class="ct-proc-num">03</div>
+          <h3>We write<br>on your behalf</h3>
+          <p>Every email is a personal message, not an ad. We handle all the technical setup.</p>
+        </div>
+        <div class="ct-proc-col">
+          <div class="ct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <div class="ct-proc-num">04</div>
+          <h3>We hand over<br>warm leads</h3>
+          <p>Requests for a proposal, a meeting or a call — with the full email thread.</p>
+        </div>
+      </div>
+      <div class="ct-link-row">
+        <a href="#discuss" class="ct-btn-primary">Get a lead forecast for my niche →</a>
+      </div>
+    </div>
+  </section>
+
+    <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">ECONOMICS</div>
+      <h2 class="ct-h2">An in-house SDR team or Plemio: which costs less</h2>
+      <p class="ct-lead" style="margin-bottom:2.5rem">What prospecting for new B2B clients costs with an in-house team — and what the same work costs with us.</p>
+      <div class="ct-tech-grid">
+        <div class="ct-tech-visual">
+          <div class="ct-tech-compare">
+            <div class="ct-tech-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+              <span class="ct-tech-badge">×10</span>
+            </div>
+            <div class="ct-tech-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+            </div>
+            <div class="ct-tech-mailgrid" style="grid-template-columns:repeat(3,1fr)">
+              <div class="ct-tech-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></div>
+              <div class="ct-tech-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></div>
+              <div class="ct-tech-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></div>
+            </div>
+          </div>
+          <div class="ct-tech-nums">
+            <div class="ct-tech-num-col">
+              <div class="lbl">In-house: 10 SDRs</div>
+              <div class="sub">$5,000 salary each</div>
+              <div class="big">$50,000/mo</div>
+            </div>
+            <div class="ct-tech-num-col">
+              <div class="lbl">Plemio</div>
+              <div class="sub">fee + 20 leads × $35</div>
+              <div class="big purple">≈ $1,600/mo</div>
+            </div>
+          </div>
+        </div>
+        <div class="ct-tech-text">
+          <p>Cold prospecting is the most expensive part of sales: reps spend hours finding contacts and hearing “no”. We take this work off your plate entirely — like an outsourced SDR team, only paid for results — and your reps step in once a prospect has replied and is ready to talk.</p>
+          <p>Ten people on cold outreach cost about $50,000 a month in salaries alone — before taxes, benefits, training and churn. With us, the same month costs around $1,600: a fixed fee plus payment for the leads that actually came in.</p>
+          <p>And the reach is comparable: emails go out in parallel from 3 domains and 3 Google Workspace mailboxes — 250–300 personal emails a day, as if a whole team were at work. Need more leads? We add domains and mailboxes, not headcount.</p>
+        </div>
+        <div class="ct-cta-group ct-tech-cta">
+          <a href="#discuss" class="ct-cta-primary">Compare with my sales team costs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== Plemio | Home (EN) | Part 2 of 3: results, cases, pricing, risk, leads, examples, benefits, about, FAQ =====
+     Paste as T123 blocks in order: 1 → 2 → 3. -->
+
+<div class="ct-page">
+
+  <!-- EXPECTED RESULTS -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-teal">RESULTS</div>
+      <h2 class="ct-h2">What results to expect</h2>
+      <div class="ct-vol-boxes">
+        <div class="ct-vol-box">
+          <div class="mo">Month 1</div>
+          <div class="vnum">10–15</div>
+          <div class="vlbl">leads</div>
+        </div>
+        <div class="ct-vol-box">
+          <div class="mo">Month 2</div>
+          <div class="vnum">20–30</div>
+          <div class="vlbl">leads</div>
+        </div>
+        <div class="ct-vol-box">
+          <div class="mo">Month 3</div>
+          <div class="vnum">30–40</div>
+          <div class="vlbl">leads</div>
+        </div>
+        <div class="ct-vol-box">
+          <div class="mo">every day</div>
+          <div class="vnum">250+</div>
+          <div class="vlbl">emails a day</div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--text-3);margin-top:1rem">Average figures for a project running on 3 domains and 3 Google Workspace mailboxes. Lead volume scales by adding domains and mailboxes.</p>
+    </div>
+  </section>
+
+    <style>
+    #cases .ct-scases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    #cases .ct-scase { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--bdr); border-radius: var(--radius-lg); padding: 1.6rem; transition: border-color .2s, box-shadow .2s, transform .2s; }
+    #cases .ct-scase:hover { border-color: var(--purple-mid); box-shadow: 0 14px 34px rgba(91,75,216,.10); transform: translateY(-2px); }
+    #cases .ct-scase-head { display: flex; align-items: center; gap: .75rem; }
+    #cases .ct-scase-ico { width: 42px; height: 42px; border-radius: 50%; border: 1.6px solid var(--purple); color: var(--purple); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    #cases .ct-scase-ico svg { width: 21px; height: 21px; }
+    #cases .ct-scase-head h3 { font-size: 17px; font-weight: 700; line-height: 1.25; margin: 0; flex: 1; }
+    #cases .ct-scase-term { font-size: 12px; font-weight: 700; color: var(--teal); background: var(--teal-lt); border-radius: 999px; padding: .3rem .65rem; white-space: nowrap; }
+    #cases .ct-scase-who { font-size: 14px; color: var(--text-2); line-height: 1.55; margin: 1rem 0 1.25rem; }
+    #cases .ct-scase-nums { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: auto; }
+    #cases .ct-scase-nums div { background: var(--bg-2); border-radius: var(--radius); padding: 1rem 1.1rem; }
+    #cases .ct-scase-nums b { display: block; font-size: 34px; font-weight: 800; line-height: 1; color: var(--purple); letter-spacing: -.02em; }
+    #cases .ct-scase-nums span { display: block; font-size: 13px; color: var(--text-3); margin-top: .4rem; }
+    #cases .ct-scase-foot { display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; border-top: 1px solid var(--bdr); margin-top: 1.25rem; padding-top: 1rem; font-size: 14px; color: var(--text-2); }
+    #cases .ct-scase-foot b { color: var(--text); }
+    #cases .ct-scase-foot a, #cases .ct-scase-foot a:link, #cases .ct-scase-foot a:visited { font-weight: 600; color: var(--purple); text-decoration: none; }
+    #cases .ct-scase-foot a:hover { text-decoration: underline; }
+    #cases .ct-scase-note { font-size: 15px; color: var(--text-2); line-height: 1.6; margin-top: 1.5rem; }
+    #cases .ct-scase-note b { color: var(--text); }
+    @media (max-width: 960px) { #cases .ct-scases { grid-template-columns: 1fr; max-width: 560px; } }
+    @media (max-width: 720px) { #cases .ct-scase { padding: 1.3rem; } #cases .ct-scase-nums b { font-size: 28px; } }
+  </style>
+  <section class="ct-section" id="cases">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-teal">CASES</div>
+      <h2 class="ct-h2">Results from real campaigns</h2>
+      <div class="ct-scases">
+        <article class="ct-scase">
+          <div class="ct-scase-head">
+            <div class="ct-scase-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></svg></div>
+            <h3>Steel structures</h3>
+            <span class="ct-scase-term">3 mo</span>
+          </div>
+          <p class="ct-scase-who">A Midwest fabrication plant reached general contractors and construction procurement teams.</p>
+          <div class="ct-scase-nums">
+            <div><b>37</b><span>leads</span></div>
+            <div><b>4</b><span>deals</span></div>
+          </div>
+          <div class="ct-scase-foot">
+            <span>Cost per lead <b>$40</b></span>
+          </div>
+        </article>
+        <article class="ct-scase">
+          <div class="ct-scase-head">
+            <div class="ct-scase-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></div>
+            <h3>Coffee roaster</h3>
+            <span class="ct-scase-term">2.5 mo</span>
+          </div>
+          <p class="ct-scase-who">Premium specialty coffee for cafés and restaurants.</p>
+          <div class="ct-scase-nums">
+            <div><b>85</b><span>leads</span></div>
+            <div><b>14</b><span>deals</span></div>
+          </div>
+          <div class="ct-scase-foot">
+            <span>Cost per lead <b>$47</b></span>
+          </div>
+        </article>
+        <article class="ct-scase">
+          <div class="ct-scase-head">
+            <div class="ct-scase-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></div>
+            <h3>Custom IT development</h3>
+            <span class="ct-scase-term">3 mo</span>
+          </div>
+          <p class="ct-scase-who">System integrations with deals from $35K, sold to CIOs at manufacturers.</p>
+          <div class="ct-scase-nums">
+            <div><b>23</b><span>leads</span></div>
+            <div><b>2</b><span>deals</span></div>
+          </div>
+          <div class="ct-scase-foot">
+            <span>Cost per lead <b>$68</b></span>
+          </div>
+        </article>
+      </div>
+      <p class="ct-scase-note">In these projects a lead cost our clients <b>$40 to $68</b>. We quote the price for your niche before launch and fix it in the contract.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="ct-section" id="prices">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">Pricing</div>
+      <h2 class="ct-h2">How our lead generation pricing works</h2>
+      <p class="ct-lead ct-price-lead">Two payments: a fixed fee <b>and</b> pay-per-result.</p>
+      <div class="ct-pricing-wrap">
+        <div class="ct-price-card">
+          <div class="ct-price-lbl">Monthly fee</div>
+          <div class="ct-price-val">from $900 <span>/mo</span></div>
+          <div class="ct-price-desc">Covers the sending platform, contact data and technical infrastructure.</div>
+        </div>
+        <div class="ct-price-plus-wrap"><div class="ct-price-plus">+</div></div>
+        <div class="ct-price-card">
+          <div class="ct-price-lbl">Pay per result</div>
+          <div class="ct-price-val">from $35 <span>/ lead</span></div>
+          <div class="ct-price-desc">The price is fixed in the contract before launch.</div>
+        </div>
+      </div>
+      <div class="ct-price-example">
+        <div class="pe-title">Monthly example</div>
+        <div class="pe-row">
+          <div class="pe-item"><span class="pe-cap">Fixed fee</span><span class="pe-val">$900</span></div>
+          <span class="pe-op">+</span>
+          <div class="pe-item"><span class="pe-cap">20 leads × $35</span><span class="pe-val">$700</span></div>
+          <span class="pe-op">=</span>
+          <div class="pe-item"><span class="pe-cap accent">Total per month</span><span class="pe-val accent">$1,600</span></div>
+        </div>
+      </div>
+      <div style="margin-top:2rem">
+        <a href="#discuss" class="ct-btn-primary">Get the lead price for my niche →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISK -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">We share the risk</div>
+      <h2 class="ct-h2">We share the risk — we earn when you get leads</h2>
+      <p class="ct-lead ct-risk-lead"><b>We’re in the same boat:</b> the fixed fee only covers our costs — we make money only when qualified leads reach you. Our business model depends on being effective; otherwise the project loses us money.</p>
+      <div class="ct-risk-proof">
+        <div class="num">72%</div>
+        <div class="label">of our agency revenue today comes from clients paying <b>for results.</b></div>
+      </div>
+      <details class="ct-why">
+        <summary>Why we work this way<span class="ct-why-arr" aria-hidden="true">▾</span></summary>
+        <p class="ct-risk-para">Many agencies simply charge a flat retainer of $2,000+ a month, and we get it — it’s a far less risky way to work. Our approach is a partnership: think of us as an in-house B2B marketer whose pay is mostly KPI-based, so they try hard. Except, unlike an in-house marketer, we’re easy to fire :) So we try even harder.</p>
+      </details>
+      <div class="ct-cta-group" style="align-items:center">
+        <a class="ct-btn-primary" href="#discuss">Calculate my ROI →</a>
+        <span class="ct-risk-note">15–20 minutes — we’ll tell you honestly whether outreach will pay off in your niche.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD EXAMPLES -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">Leads</div>
+      <h2 class="ct-h2">What counts as a lead</h2>
+      <p class="ct-lead-callout"><b>A lead</b> is a reply from a prospect who confirmed interest or asked for a next step. You pay only for these deliberate replies.</p>
+      <div class="ct-lead-subhead">What counts as a lead:</div>
+      <div class="ct-lead-types">
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>Asked for a proposal</div>
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.4"/></svg>Asked about pricing or terms</div>
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7L12 12l8.7-5"/><path d="M12 22V12"/></svg>Asked for a trial order</div>
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Asked for a call or meeting</div>
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Asked for an audit or demo</div>
+        <div class="ct-lead-type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15 20v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1"/><circle cx="8.5" cy="8" r="3.5"/><path d="M18 8v6M15 11h6"/></svg>Referred us to another decision-maker</div>
+      </div>
+    </div>
+  </section>
+
+    <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-purple">Examples</div>
+      <h2 class="ct-h2">Real lead examples</h2>
+      <div class="ct-lead-carousel">
+        <div class="ct-carousel-wrap">
+        <button class="ct-carousel-arrow prev" aria-label="Previous" onclick="scrollLeads(-1)">‹</button>
+        <button class="ct-carousel-arrow next" aria-label="Next" onclick="scrollLeads(1)">›</button>
+        <div class="ct-viewport">
+        <div class="ct-lead-track" id="leadTrack">
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">Direct request for a proposal</div>
+            <div class="lc-sphere">Industry: manufacturing consumables supply</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Consumables — proposal and price list</div>
+              <div class="lc-head">
+                <div class="lc-ava">M</div>
+                <div class="lc-meta"><div class="lc-name">M. Ca****ll</div><div class="lc-addr">m.****ll@r*****b.com</div></div>
+                <div class="lc-time">today, 10:24 AM</div>
+              </div>
+              <div class="lc-body">Hello,<br><br>I got your email. Please send a proposal with your terms and price list. We’re interested in New York and New Jersey.
+                <div class="lc-sign">Best regards,<br>M. Ca****ll<br>Procurement Director<br>R****b Inc.</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> We sent the proposal within an hour. The next day the procurement director replied with questions about volumes. The contract was signed 11 days later — all over email, not a single call.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">Follow-up questions, large deal</div>
+            <div class="lc-sphere">Industry: HR and corporate benefits</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Fwd: Corporate benefits for your team</div>
+              <div class="lc-head">
+                <div class="lc-ava">I</div>
+                <div class="lc-meta"><div class="lc-name">I. Ba*****r</div><div class="lc-addr">i.b*****r@a****group.com</div></div>
+                <div class="lc-time">today, 2:09 PM</div>
+              </div>
+              <div class="lc-body">Hi Nick, I received your proposal and have a few questions. How many cities do you operate in? Do you cover Denver and Austin? What is the cost per employee?
+                <div class="lc-sign">I. Ba*****r<br>HR Director<br>A****group<br>+1 (3**) ***-**** · a****group.com</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> We replied with a detailed overview and case studies. The HR director set up a meeting with the CFO. After three rounds of talks — a 6-month contract covering 320+ employees.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">Interested, but not right now</div>
+            <div class="lc-sphere">Industry: software development</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Integration and automation — proposal</div>
+              <div class="lc-head">
+                <div class="lc-ava">A</div>
+                <div class="lc-meta"><div class="lc-name">A. Ro*****s</div><div class="lc-addr">a.r*****s@****soft.com</div></div>
+                <div class="lc-time">today, 12:07 PM</div>
+              </div>
+              <div class="lc-body">Hi Steve,<br><br>Interesting topic, but we’re closing the quarter and all hands are busy. Ping me again in September — that’s when we plan next year.
+                <div class="lc-sign">A. Ro*****s<br>CTO, D****soft</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> We set a reminder for September 1 and followed up. The CTO replied the same day and booked a call. Talks are ongoing; the deal is expected in Q4.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">Routed to the decision-maker + call</div>
+            <div class="lc-sphere">Industry: wholesale building materials</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Building materials — partnership proposal</div>
+              <div class="lc-relay">↳ The front desk forwarded the email to the sales director. Three days later he replied:</div>
+              <div class="lc-head">
+                <div class="lc-ava">W</div>
+                <div class="lc-meta"><div class="lc-name">W. Sh**e</div><div class="lc-addr">w.**ke@stup.com</div></div>
+                <div class="lc-time">10:41 AM</div>
+              </div>
+              <div class="lc-body">Hello. My colleagues passed on your proposal. We’re expanding into new regions right now, so the timing is right. Can we talk on Thursday after 2 PM ET?
+                <div class="lc-sign">W. Sh**e<br>Sales Director, S****p LLC</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> A 45-minute call on Thursday. The sales director outlined priority regions and the buyer profile. We launched the campaign two weeks later. First month: 14 interested replies and 2 closed deals.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">A “no” with the door left open</div>
+            <div class="lc-sphere">Industry: freight logistics</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Freight services — proposal</div>
+              <div class="lc-head">
+                <div class="lc-ava">O</div>
+                <div class="lc-meta"><div class="lc-name">O. *******n</div><div class="lc-addr">o.*******n@t****.com</div></div>
+                <div class="lc-time">today, 11:32 AM</div>
+              </div>
+              <div class="lc-body">Hello. We aren’t considering new vendors in this area right now — we’ve just closed the quarterly budget. Feel free to reach out in December, when we build next year’s plan.
+                <div class="lc-sign">Head of Business Development, T****g</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> We reached out a little early, in November. She replied two days later and asked for an updated proposal. Talks are ongoing, and budget has been allocated.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">Redirected to the decision-maker, fast path to a deal</div>
+            <div class="lc-sphere">Industry: management consulting</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Management consulting — partnership</div>
+              <div class="lc-relay">↳ The office forwarded the email to the practice lead. Six days later he replied:</div>
+              <div class="lc-head">
+                <div class="lc-ava">I</div>
+                <div class="lc-meta"><div class="lc-name">I. Wa****n</div><div class="lc-addr">i.w****n@p******x.com</div></div>
+                <div class="lc-time">9:20 AM</div>
+              </div>
+              <div class="lc-body">Hello. Your proposal was forwarded to me. We’re actually looking to enter a new segment. Let’s talk — does Wednesday at 11 AM work for you?
+                <div class="lc-sign">I. Wa****n<br>Partner, P******x</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> A 50-minute call. We discussed the niche and geography and launched a 3-month pilot. After the pilot — a full-service engagement on an open-ended contract.</div>
+          </div>
+
+          <div class="ct-lead-card">
+            <div class="lc-lbl">A partnership instead of a direct purchase</div>
+            <div class="lc-sphere">Industry: cloud services for business</div>
+            <div class="lc-mail">
+              <div class="lc-subject">Re: Cloud service — proposal</div>
+              <div class="lc-head">
+                <div class="lc-ava">S</div>
+                <div class="lc-meta"><div class="lc-name">S. ******n</div><div class="lc-addr">s.******n@c*****b.com</div></div>
+                <div class="lc-time">today, 3:48 PM</div>
+              </div>
+              <div class="lc-body">Hi Chris, I got your proposal. It’s not relevant for us right now, but we work with dozens of clients who might be interested. Would you be open to a partnership model, referral fees or something similar?
+                <div class="lc-sign">CEO, C*****b</div>
+              </div>
+            </div>
+            <div class="lc-res"><strong>What happened next?</strong> We hopped on a call and agreed on a referral scheme. Over two months the CEO passed along 3 warm contacts, and one of them became a client. Unusual, but it worked.</div>
+          </div>
+
+        </div>
+        </div>
+        </div>
+        <p class="ct-lead-hint">← swipe the cards to see more examples →</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="ct-section">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-teal">Benefits</div>
+      <h2 class="ct-h2">Reasons to start now</h2>
+      <div class="ct-ben-grid">
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></div>
+          <h3>Pay for results</h3>
+          <p>You pay for leads with genuine interest. Each qualified contact costs 3–5x less than an in-house rep on cold calls.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.3-4.3"/></svg></div>
+          <h3>Works without search demand</h3>
+          <p>Outreach finds clients where Google and LinkedIn ads fall short. Up to 80% of your B2B market isn’t searching for a solution right now — outreach reaches them too.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15l5-5 3 3 7-7"/><path d="M16 6h4v4"/></svg></div>
+          <h3>Scales with you</h3>
+          <p>Want more leads? We add domains and mailboxes. A starting setup of 3 domains and 3 Google Workspace mailboxes sends 250–300 emails a day; double the setup and you get up to 600 touches with your target audience daily.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-3 7.7-7 9.5C8 18.7 5 15.6 5 11V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Compliant and safe</h3>
+          <p>We follow CAN-SPAM and GDPR rules: one-to-one emails to business addresses, a real sender, a clear way to opt out — and every unsubscribe request is honored.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13h5l-1 8 8-11h-5l1-7z"/></svg></div>
+          <h3>First leads from day 10</h3>
+          <p>No waiting for months. While SEO takes 6–12 months to ramp up and paid social burns budget on testing, outreach delivers first leads in week two.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.5-5.7L20 8"/><path d="M20 12a8 8 0 0 1-13.5 5.7L4 16"/><path d="M20 4v4h-4M4 20v-4h4"/></svg></div>
+          <h3>Frees up your sales team</h3>
+          <p>Your reps stop spending 60–70% of their time on cold prospecting and dialing. They work only with warm contacts — and close rates go up 2–3x.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/></svg></div>
+          <h3>Personal emails cut through the noise</h3>
+          <p>Inboxes are full of templated sequences sent in bulk. We write short, relevant emails for each company and decision-maker — so they read like a real business conversation and get answered.</p>
+        </div>
+        <div class="ct-ben-card">
+          <div class="ct-ben-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></div>
+          <h3>Precise targeting</h3>
+          <p>You reach specific people at specific companies — by industry, size and role. That eliminates up to 90% of junk inquiries that eat up your reps’ time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT / TEAM / FOUNDER -->
+  <style>
+    
+    #about { --about-measure: 780px; }
+    .ct-about-lead { font-size: 17px; color: var(--text-2); line-height: 1.7; max-width: var(--about-measure, 780px); }
+    .ct-about-part { margin-top: 3.25rem; padding-top: 2.5rem; border-top: 1px solid var(--bdr); }
+    .ct-about-h3 { font-size: 24px; font-weight: 800; line-height: 1.2; letter-spacing: -.02em; margin-bottom: 1rem; }
+    
+    .ct-founder { display: grid; grid-template-columns: 220px 1fr; gap: 2.25rem; align-items: start; margin-top: 1.5rem;
+      max-width: var(--about-measure, 780px); }
+    .ct-founder-photo { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top;
+      border-radius: var(--radius-lg); border: 1px solid var(--bdr); display: block; background: var(--bg-2); }
+    .ct-founder-text p { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 1rem; }
+    .ct-founder-text p:last-of-type { margin-bottom: 1.35rem; }
+    .ct-founder-link, .ct-founder-link:link, .ct-founder-link:visited {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: 15px; font-weight: 600; color: var(--purple); text-decoration: none;
+      border-bottom: 1px solid rgba(91,75,216,.28); padding-bottom: 2px; transition: border-color .2s;
+    }
+    .ct-founder-link:hover { border-bottom-color: var(--purple); }
+    @media (max-width: 720px) {
+      .ct-founder { grid-template-columns: 1fr; gap: 1.5rem; }
+      
+      .ct-founder-photo { max-width: 190px; margin: 0; aspect-ratio: 4 / 5; }
+      .ct-about-h3 { font-size: 21px; }
+      .ct-about-part { margin-top: 2.5rem; padding-top: 2rem; }
+    }
+  </style>
+  <section class="ct-section" id="about">
+    <div class="ct-container">
+
+            <div class="ct-eyebrow ey-purple">About us</div>
+      <h2 class="ct-h2">About Plemio</h2>
+      <p class="ct-about-lead">Plemio is a B2B lead generation company that works on a pay-per-lead model. We specialize in one service only — <b>cold email outreach</b> — with campaigns launched in 60+ B2B niches.</p>
+
+            <div class="ct-about-part">
+        <h3 class="ct-about-h3">The B2B lead generation team</h3>
+        <p class="ct-about-lead">The core of the agency is specialists in marketing, lead generation and building sales functions. Our team is made up of practitioners only — people who have run marketing, built sales and know what results look like from the inside.</p>
+      </div>
+
+            <div class="ct-about-part">
+        <h3 class="ct-about-h3">Ian Edwards — founder</h3>
+        <div class="ct-founder">
+          <img class="ct-founder-photo" src="https://optim.tildacdn.com/tild3433-6364-4863-b538-343738626139/-/format/webp/_.jpg.webp" alt="Ian Edwards, founder of Plemio" loading="lazy">
+          <div class="ct-founder-text">
+            <p>15 years in marketing, sales and management. Built lead generation in 22 industries, from B2C services to B2B SaaS. Grew Airo 14x in 2.5 years (backed by major telecom and fintech investors) and became a co-owner.</p>
+            <p>I know what the sales growth problem looks like from the inside. I’m building Plemio to solve exactly that: a predictable flow of leads you pay for on results.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <section class="ct-section" id="faq">
+    <div class="ct-container">
+      <div class="ct-eyebrow ey-coral">FAQ</div>
+      <h2 class="ct-h2">Frequently asked questions</h2>
+      <div class="ct-faq">
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>When will I see the first results?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>First leads come in on day 10–14: that time goes into preparing the list, writing the emails and warming up the mailboxes. Then the flow grows — on average 10–15 leads in month one, 20–30 in month two and 30–40 in month three for a project running on 3 domains and 3 Google Workspace mailboxes. We work on a pay-per-result lead generation model, so your budget goes into qualified inquiries, not email volume.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>What if I’m not happy with the results?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>Leads are paid only as they come — for replies with confirmed interest; the monthly fee covers the data and campaign infrastructure. Volume scales: if you need more leads, we add domains and mailboxes. We discuss everything on a call before launch.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>What counts as a lead, and what exactly do I pay for?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>A lead is a reply in which a prospect confirmed interest: asked for a proposal, a meeting, a call or more information. “Unsubscribe me” or “not relevant” is not a lead. You pay only for real contacts who are interested.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>What budget do I need, and what drives the cost per lead?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>The budget has two parts. A fixed monthly fee from $900 covers the sending platform, contact data and technical infrastructure. For each lead delivered you pay a fixed price — from $35. The cost of a B2B lead depends on your niche, average deal size, product complexity and how narrow your decision-maker profile is: the narrower the segment and the bigger the deal, the more a single lead costs. We fix the exact price and monthly volume in the contract before launch.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>Are you an agency or a lead vendor?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>In how we work — a full-cycle cold email agency: we build the list, write the email sequences, warm up the mailboxes and handle the conversations. In how you pay — like a B2B lead vendor: you pay for leads delivered, not for hours or a retainer. Unlike a typical lead vendor, we never resell leads to other clients: the list and copy are built for your product, and every lead is yours alone.</p></div>
+        </div>
+        <button type="button" class="ct-faq-more-btn" id="faqMoreBtn" onclick="toggleFaqMore(this); this.hidden = !document.getElementById(&#39;faqMore&#39;).hidden;">More questions</button>
+        <div class="ct-faq-more" id="faqMore" hidden>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>What makes you different?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>The main difference is pay-per-result leads. You pay for real contacts at interested companies, not for process or a retainer — so we care about the quality of every lead as much as you do.</p>
+          <p>We specialize in B2B and cover the full cycle: from building the list to handing ready leads to your sales team. That makes B2B client acquisition systematic and predictable rather than a series of one-off spikes. We understand how enterprise deals work — long approvals, multiple decision-makers, big deal sizes — and build lead generation around exactly that.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>Is every campaign a success?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>Unfortunately, no. Statistically, about one project in eight underperforms: there are replies, but few leads.</p>
+          <p>Why? Almost always it’s a weak product with no clear value proposition in an overheated market. The email has to hook with numbers — a decision-maker should catch the key figure in a split second: how much more efficient their business becomes with you. If you have that, the leads will come.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>Are results guaranteed within 2 months?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>We’ll be honest: sometimes by day 12 there are already 2–3 leads a day. Other times the right combination of “RIGHT LIST + HOOKING EMAIL + FAST LEAD FOLLOW-UP” only clicks in month three, after thousands of emails. But once it clicks, it really works — and becomes the cheapest, most stable flow of leads and deals the client has.</p>
+          <p>Success also often comes down to AGENCY — CLIENT teamwork. The client has been in the business for years and can tell us who the decision-maker is and how to catch their attention.</p>
+          <p>To make a campaign succeed, we also need as much sales material from the client as possible beyond the standard brief: proposals, websites (we transcribe them), old sales emails (the best and the worst), product decks. The more, the better. Sometimes a client forgets to share something at launch, and it only comes up in month two or three — that can also delay success.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>How does outreach fit into our sales team?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>In B2B sales, outsourced lead generation covers the top of the funnel: we handle the cold contact and the first exchange, and your reps join the conversation with a decision-maker who has already replied and shown interest. No process overhaul needed — leads arrive by email or straight into your CRM in a convenient format: company, contact, title, the request and the full email thread. Reps don’t waste time cold-calling lists and work only with people who are already in a conversation.</p></div>
+        </div>
+        <div class="ct-faq-item">
+          <button class="ct-faq-q" onclick="toggleFaq(this)"><span>We already get inbound leads from our website — why add outreach?</span><span class="ct-faq-arr">▾</span></button>
+          <div class="ct-faq-a" hidden><p>Inbound B2B leads are a limited channel: volume depends on how many companies are searching for your product right now, and you don’t choose who comes to you. Website leads capture current demand well but don’t get you into specific companies on your target list. Outbound lead generation works the other way around: we set the industry, company size and decision-maker role, and reach out to them first. The channels don’t compete, they add up — your site captures warm demand, outreach brings in those who haven’t heard of you yet.</p></div>
+        </div>
+        <button type="button" class="ct-faq-more-btn" onclick="var b=document.getElementById(&#39;faqMoreBtn&#39;); toggleFaqMore(b); b.hidden = false; b.scrollIntoView({block:&#39;center&#39;});">Show less</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== Plemio | Home (EN) | Part 3 of 3: FAQ schema, contact form, popups, scripts, SEO text, footer, cookie banner =====
+     Paste as T123 blocks in order: 1 → 2 → 3. -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When will I see the first results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First leads come in on day 10–14: that time goes into preparing the list, writing the emails and warming up the mailboxes. Then the flow grows — on average 10–15 leads in month one, 20–30 in month two and 30–40 in month three for a project running on 3 domains and 3 Google Workspace mailboxes. We work on a pay-per-result lead generation model, so your budget goes into qualified inquiries, not email volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I’m not happy with the results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leads are paid only as they come — for replies with confirmed interest; the monthly fee covers the data and campaign infrastructure. Volume scales: if you need more leads, we add domains and mailboxes. We discuss everything on a call before launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a lead, and what exactly do I pay for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lead is a reply in which a prospect confirmed interest: asked for a proposal, a meeting, a call or more information. “Unsubscribe me” or “not relevant” is not a lead. You pay only for real contacts who are interested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What budget do I need, and what drives the cost per lead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The budget has two parts. A fixed monthly fee from $900 covers the sending platform, contact data and technical infrastructure. For each lead delivered you pay a fixed price — from $35. The cost of a B2B lead depends on your niche, average deal size, product complexity and how narrow your decision-maker profile is: the narrower the segment and the bigger the deal, the more a single lead costs. We fix the exact price and monthly volume in the contract before launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you an agency or a lead vendor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In how we work — a full-cycle cold email agency: we build the list, write the email sequences, warm up the mailboxes and handle the conversations. In how you pay — like a B2B lead vendor: you pay for leads delivered, not for hours or a retainer. Unlike a typical lead vendor, we never resell leads to other clients: the list and copy are built for your product, and every lead is yours alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes you different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main difference is pay-per-result leads. You pay for real contacts at interested companies, not for process or a retainer — so we care about the quality of every lead as much as you do. We specialize in B2B and cover the full cycle: from building the list to handing ready leads to your sales team. That makes B2B client acquisition systematic and predictable rather than a series of one-off spikes. We understand how enterprise deals work — long approvals, multiple decision-makers, big deal sizes — and build lead generation around exactly that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is every campaign a success?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unfortunately, no. Statistically, about one project in eight underperforms: there are replies, but few leads. Why? Almost always it’s a weak product with no clear value proposition in an overheated market. The email has to hook with numbers — a decision-maker should catch the key figure in a split second: how much more efficient their business becomes with you. If you have that, the leads will come."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are results guaranteed within 2 months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We’ll be honest: sometimes by day 12 there are already 2–3 leads a day. Other times the right combination of “RIGHT LIST + HOOKING EMAIL + FAST LEAD FOLLOW-UP” only clicks in month three, after thousands of emails. But once it clicks, it really works — and becomes the cheapest, most stable flow of leads and deals the client has. Success also often comes down to AGENCY — CLIENT teamwork. The client has been in the business for years and can tell us who the decision-maker is and how to catch their attention. To make a campaign succeed, we also need as much sales material from the client as possible beyond the standard brief: proposals, websites (we transcribe them), old sales emails (the best and the worst), product decks. The more, the better. Sometimes a client forgets to share something at launch, and it only comes up in month two or three — that can also delay success."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does outreach fit into our sales team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In B2B sales, outsourced lead generation covers the top of the funnel: we handle the cold contact and the first exchange, and your reps join the conversation with a decision-maker who has already replied and shown interest. No process overhaul needed — leads arrive by email or straight into your CRM in a convenient format: company, contact, title, the request and the full email thread. Reps don’t waste time cold-calling lists and work only with people who are already in a conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We already get inbound leads from our website — why add outreach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inbound B2B leads are a limited channel: volume depends on how many companies are searching for your product right now, and you don’t choose who comes to you. Website leads capture current demand well but don’t get you into specific companies on your target list. Outbound lead generation works the other way around: we set the industry, company size and decision-maker role, and reach out to them first. The channels don’t compete, they add up — your site captures warm demand, outreach brings in those who haven’t heard of you yet."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plemio",
+  "url": "https://plemio.com/",
+  "description": "B2B lead generation agency: cold email outreach with pay-per-lead pricing."
+}
+</script>
+
+    <style>
+  .ctb-section{
+    background:#fff;
+    padding: 80px 32px;
+    font-family: 'Manrope', 'Inter', Arial, sans-serif;
+    box-sizing: border-box;
+    border-top: 1px solid #E7E8EF;
+    scroll-margin-top: 80px;
+  }
+  .ctb-grid{
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .ctb-left{color:#14152A;}
+  .ctb-right{min-width: 0;}
+
+  .ctb-tag{
+    display:inline-block; padding:0; margin-bottom:14px;
+    font-size:12px; font-weight:700; letter-spacing:.2em;
+    text-transform:uppercase; color:#5B4BD8;
+  }
+
+  .ctb-h2{font-size:40px;font-weight:800;margin:0 0 18px;line-height:1.12;letter-spacing:-.025em;color:#14152A;}
+  .ctb-text{font-size:18px;line-height:1.65;margin:0 0 8px;color:#4B5563;}
+  .ctb-faq{margin-top:32px;padding-top:28px;border-top:1px solid #E7E8EF;}
+  .ctb-faq-head{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5B4BD8;margin:0 0 8px;}
+  .ctb-faq-list{list-style:none;padding:0;margin:0;}
+  .ctb-faq-list li{font-size:15px;color:#14152A;padding:13px 0;border-bottom:1px solid #E7E8EF;line-height:1.4;}
+  .ctb-faq-list li:last-child{border-bottom:none;}
+  .ctb-contacts{display:flex;flex-direction:column;gap:14px;margin-top:32px;padding-top:28px;border-top:1px solid #E7E8EF;}
+  .ctb-contact{display:flex;align-items:center;gap:12px;text-decoration:none;}
+  .ctb-cico{width:42px;height:42px;border-radius:50%;border:1.6px solid #5B4BD8;display:flex;align-items:center;justify-content:center;color:#5B4BD8;flex-shrink:0;}
+  .ctb-cico svg{width:20px;height:20px;}
+  .ctb-contact .ctb-clbl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#8A90A2;font-weight:700;}
+  .ctb-contact .ctb-cval{font-size:15px;font-weight:700;color:#14152A;line-height:1.3;}
+  .ctb-contact:hover .ctb-cval{color:#5B4BD8;}
+
+  .ctb-card{
+    background:#fff;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .10);
+    border: 1px solid #E7E8EF;
+  }
+  .ctb-card-title{font-size:22px;font-weight:800;color:#14152A;margin:0 0 22px;}
+
+  .ctb-field{margin-bottom:18px;}
+  .ctb-label{display:block;font-size:14px;color:#14152A;margin-bottom:8px;font-weight:700;}
+  .ctb-label span{color:#ef4444;}
+  .ctb-input,.ctb-textarea{
+    width:100%;box-sizing:border-box;padding:14px 16px;
+    border:1px solid #E7E8EF;border-radius:14px;
+    font-size:16px;font-family:inherit;color:#14152A;
+    outline:none;transition:border-color .2s, box-shadow .2s;background:#F6F7FB;
+  }
+  .ctb-input::placeholder,.ctb-textarea::placeholder{color:#9aa1b2;}
+  .ctb-input:focus,.ctb-textarea:focus{border-color:#5B4BD8; background:#fff; box-shadow:0 0 0 4px rgba(91,75,216,.12);}
+  .ctb-textarea{min-height:112px;resize:vertical;}
+
+  .ctb-phone{display:flex;align-items:center;gap:10px;
+    border:1px solid #E7E8EF;border-radius:14px;padding:0 16px;background:#F6F7FB;
+    transition:border-color .2s, box-shadow .2s;}
+  .ctb-phone:focus-within{border-color:#5B4BD8; background:#fff; box-shadow:0 0 0 4px rgba(91,75,216,.12);}
+  .ctb-flag{font-size:14px;font-weight:700;color:#14152A;letter-spacing:.04em;}
+  .ctb-phone input{border:0;outline:none;flex:1;padding:14px 0;font-size:16px;
+    font-family:inherit;color:#14152A;background:transparent;}
+
+  .ctb-hp{position:absolute!important;left:-9999px!important;top:-9999px!important;}
+
+  .ctb-btn{
+    margin-top:6px;width:100%;background:linear-gradient(135deg, #5B4BD8 0%, #6d59ff 100%);color:#fff;border:0;
+    padding:16px 24px;border-radius:999px;font-size:16px;font-weight:700;
+    font-family:inherit;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, opacity .2s;
+    box-shadow:0 14px 30px rgba(91,75,216,.22);
+  }
+  .ctb-btn:hover{transform:translateY(-1px);}
+  .ctb-btn:active{transform:translateY(0);}
+  .ctb-btn:disabled{opacity:.65;cursor:default;transform:none;box-shadow:none;}
+
+  .ctb-msg{margin-top:18px;font-size:15px;display:none;line-height:1.5;}
+  .ctb-msg.ok{color:#107a41;display:block;}
+  .ctb-msg.err{color:#cf2f2f;display:block;}
+
+  .ctb-consent{display:flex;flex-direction:column;gap:11px;margin:2px 0 20px;}
+  .ctb-check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:#4B5563;line-height:1.45;cursor:pointer;}
+  .ctb-check input{width:18px;height:18px;margin:1px 0 0;flex-shrink:0;accent-color:#5B4BD8;cursor:pointer;}
+  .ctb-check a{color:#4B5563;text-decoration:underline;}
+  .ctb-check a:hover{color:#5B4BD8;}
+
+  .ctb-next{margin-top:28px;padding-top:24px;border-top:1px solid #E7E8EF;}
+  .ctb-next-head{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5B4BD8;margin:0 0 6px;}
+  .ctb-next-list{list-style:none;padding:0;margin:0;}
+  .ctb-next-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#14152A;padding:11px 0;line-height:1.45;}
+  .ctb-next-list li span{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#F0ECFF;color:#5B4BD8;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:-1px;}
+  @media (max-width: 900px){
+    .ctb-grid{grid-template-columns:1fr; gap:32px;}
+  }
+  @media(max-width:760px){
+    .ctb-section{padding:48px 18px;}
+    .ctb-h2{font-size:30px;}
+    .ctb-text,.ctb-contacts{font-size:16px;}
+    .ctb-card{padding:24px 20px;}
+  }
+  </style>
+
+  <div class="ctb-section" id="discuss">
+    <div class="ctb-grid">
+
+            <div class="ctb-left">
+        <div class="ctb-tag">Let’s talk</div>
+        <h2 class="ctb-h2">Let’s discuss your project</h2>
+        <p class="ctb-text">We’ll ask a few questions and tell you honestly whether the project will pay off and whether email outreach is right for you. The call usually takes 15–20 minutes.</p>
+        <div class="ctb-next">
+          <div class="ctb-next-head">What happens next</div>
+          <ul class="ctb-next-list">
+            <li><span>1</span>We reply within one business day.</li>
+            <li><span>2</span>A 15–20 minute call about your product, market and ideal client.</li>
+            <li><span>3</span>You get a lead forecast and a fixed price per lead for your niche.</li>
+          </ul>
+        </div>
+      </div>
+
+            <div class="ctb-right">
+        <div class="ctb-card">
+          <div class="ctb-card-title">Discuss your project</div>
+          <form id="ctbForm" autocomplete="on">
+
+            <div class="ctb-field">
+              <label class="ctb-label">Name <span>*</span></label>
+              <input class="ctb-input" type="text" name="name" required maxlength="100" placeholder="Your name">
+            </div>
+
+            <div class="ctb-field">
+              <label class="ctb-label">Phone <span>*</span></label>
+              <div class="ctb-phone">
+                <input type="tel" name="phone" required maxlength="30" placeholder="+1 (555) 000-0000">
+              </div>
+            </div>
+
+            <div class="ctb-field">
+              <label class="ctb-label">Work email</label>
+              <input class="ctb-input" type="email" name="email" maxlength="100" placeholder="name@company.com">
+            </div>
+
+            <div class="ctb-field">
+              <label class="ctb-label">Website or product description <span>*</span></label>
+              <input class="ctb-input" type="text" name="site" maxlength="300" placeholder="example.com or a short description">
+            </div>
+
+            <div class="ctb-field">
+              <label class="ctb-label">Comment</label>
+              <textarea class="ctb-textarea" name="comment" maxlength="1000" placeholder="Any question or context..."></textarea>
+            </div>
+
+            <input class="ctb-hp" type="text" name="website" tabindex="-1" autocomplete="off" readonly>
+
+            <div class="ctb-consent">
+              <label class="ctb-check">
+                <input type="checkbox" name="consent_pd">
+                <span>I agree to the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener">Terms of Use</a></span>
+              </label>
+            </div>
+
+            <button type="submit" class="ctb-btn" id="ctbBtn">Send request</button>
+            <div class="ctb-msg" id="ctbMsg"></div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <style>
+  #ct-popup-overlay{
+    display:none;position:fixed;inset:0;z-index:999999;
+    background:rgba(0,0,0,.55);
+    align-items:flex-end;justify-content:center;
+  }
+  #ct-popup-overlay.show{display:flex;}
+  #ct-popup{
+    background:#fff;width:100%;max-width:600px;
+    border-radius:24px 24px 0 0;padding:40px 24px 32px;
+    text-align:center;animation:ctUp .3s ease;font-family:'Inter',Arial,sans-serif;
+  }
+  @keyframes ctUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+  .ct-check{width:64px;height:64px;border-radius:50%;background:#23c552;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+    color:#fff;font-size:34px;}
+  #ct-popup h3{font-size:24px;margin:0 0 8px;font-weight:700;}
+  #ct-popup p{color:#666;margin:0 0 24px;}
+  #ct-popup a{display:block;background:#000;color:#fff;text-decoration:none;
+    padding:18px;border-radius:14px;font-weight:600;}
+  .ct-timer{color:#aaa;font-size:13px;margin-top:16px;}
+  </style>
+
+  <div id="ct-popup-overlay">
+    <div id="ct-popup">
+      <div class="ct-check">✓</div>
+      <h3>Request sent!</h3>
+      <p>Thank you! Our team will get back to you within one business day.</p>
+      <a id="ct-popup-close" href="#" role="button">Close</a>
+    </div>
+  </div>
+ <script>
+  (function(){
+    var WORKER_URL = "https://calltalk-form.dm93vtb.workers.dev/";
+
+    var form = document.getElementById('ctbForm');
+    var btn  = document.getElementById('ctbBtn');
+    var msg  = document.getElementById('ctbMsg');
+    var phone = form.phone;
+
+    function showSuccessPopup(){
+      var overlay = document.getElementById('ct-popup-overlay');
+      if(!overlay) return;
+      overlay.classList.add('show');
+      function hide(ev){ if(ev) ev.preventDefault(); overlay.classList.remove('show'); }
+      var closeBtn = document.getElementById('ct-popup-close');
+      if(closeBtn) closeBtn.onclick = hide;
+      overlay.onclick = function(ev){ if(ev.target === overlay) hide(); };
+    }
+
+    window.ctShowSuccessPopup = showSuccessPopup;
+
+    phone.addEventListener('input', function(){
+      phone.value = phone.value.replace(/[^\d+()\-\s]/g, '');
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      var digitsOnly = phone.value.replace(/\D/g, '');
+      if(digitsOnly.length < 7 || digitsOnly.length > 15){
+        msg.textContent = 'Please enter a valid phone number with country code';
+        msg.className = 'ctb-msg err';
+        phone.focus();
+        return;
+      }
+
+      msg.className = 'ctb-msg';
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      var payload = {
+        name:     form.name.value,
+        phone:    form.phone.value,
+        telegram: '',
+        site:     form.site.value,
+        comment:  [form.comment.value, form.email.value ? 'Email: ' + form.email.value : '', 'Source: plemio.com (EN)'].filter(Boolean).join('\n'),
+        website:  form.website.value,
+        consent_pd:    form.consent_pd.checked,
+        consent_terms: form.consent_pd.checked
+      };
+
+      fetch(WORKER_URL, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      })
+      .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
+      .then(function(res){
+        if(res && res.ok){
+          msg.textContent = 'Request sent! We’ll get back to you shortly.';
+          msg.className = 'ctb-msg ok';
+          form.reset();
+          try{ localStorage.setItem('ct_lead_sent', '1'); }catch(e){}
+          showSuccessPopup();
+        } else {
+          throw new Error('bad');
+        }
+      })
+      .catch(function(){
+        msg.textContent = 'Something went wrong. Please try again in a minute.';
+        msg.className = 'ctb-msg err';
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.textContent = 'Send request';
+      });
+    });
+  })();
+  </script>
+
+    <style>
+  #ctl-overlay{
+    position:fixed;inset:0;z-index:2147483100; 
+    display:none;align-items:center;justify-content:center;
+    padding:16px;box-sizing:border-box;
+    background:rgba(20,21,42,.55);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+    font-family:'Manrope','Inter',Arial,sans-serif;
+  }
+  #ctl-overlay.show{display:flex;animation:ctlFade .25s ease;}
+  @keyframes ctlFade{from{opacity:0}to{opacity:1}}
+  @keyframes ctlPop{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+  .ctl-modal{
+    position:relative;width:100%;max-width:520px;
+    max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow-y:auto;
+    background:#fff;border-radius:20px;padding:30px 34px 26px;box-sizing:border-box;
+    box-shadow:0 30px 80px rgba(15,23,42,.28);color:#14152A;
+    animation:ctlPop .3s ease;
+  }
+  .ctl-modal *{box-sizing:border-box;}
+  .ctl-close{
+    position:absolute;top:14px;right:14px;z-index:3;
+    width:36px;height:36px;border:0;border-radius:50%;background:transparent;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;color:#4B5563;
+    transition:background .2s,color .2s;
+  }
+  .ctl-close:hover{background:#F2F3F8;color:#14152A;}
+  .ctl-close svg{width:20px;height:20px;}
+
+  
+  .ctl-art{position:absolute;top:34px;right:30px;width:170px;height:140px;pointer-events:none;z-index:0;}
+  .ctl-art-blob{position:absolute;top:0;left:0;width:130px;height:90px;border-radius:40px 46px 34px 50px;background:#EEEBFF;opacity:.9;}
+  .ctl-art-blob:after{content:"";position:absolute;top:-14px;left:26px;width:70px;height:56px;border-radius:50%;background:#EEEBFF;}
+  .ctl-art-card{
+    position:absolute;top:18px;left:26px;width:138px;height:108px;padding:16px 14px;
+    background:#fff;border-radius:12px;transform:rotate(-9deg);
+    box-shadow:0 14px 32px rgba(40,30,120,.14);
+  }
+  .ctl-art-title{font-size:11px;line-height:1.3;font-weight:600;color:#14152A;margin-bottom:9px;}
+  .ctl-art-bar{height:5px;border-radius:3px;background:#E3E5EC;margin-bottom:6px;}
+  .ctl-art-arrow{position:absolute;right:10px;bottom:6px;width:26px;height:26px;color:#5B4BD8;}
+
+  .ctl-body{position:relative;z-index:1;}
+  .ctl-badge{
+    display:inline-block;padding:5px 11px;border-radius:8px;margin-bottom:12px;
+    background:#EEEBFF;color:#5B4BD8;font-size:12px;font-weight:600;line-height:1.3;
+  }
+  .ctl-title{margin:0 0 12px;font-size:32px;line-height:1.1;font-weight:800;letter-spacing:-.02em;color:#14152A;}
+  .ctl-title span{color:#5B4BD8;}
+  .ctl-text{margin:0 0 18px;font-size:15px;line-height:1.5;color:#4B5563;max-width:420px;}
+
+  .ctl-field{
+    display:flex;align-items:center;gap:12px;margin-bottom:10px;padding:0 14px;
+    border:1px solid #E1E3EB;border-radius:10px;background:#fff;
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .ctl-field:focus-within{border-color:#5B4BD8;box-shadow:0 0 0 4px rgba(91,75,216,.12);}
+  .ctl-field.err{border-color:#ef4444;}
+  .ctl-field svg{width:20px;height:20px;flex-shrink:0;color:#6B7080;}
+  .ctl-field input{
+    flex:1;min-width:0;border:0;outline:none;background:transparent;
+    padding:13px 0;font-size:16px;font-family:inherit;color:#14152A;
+  }
+  .ctl-field input::placeholder{color:#6B7080;}
+
+  .ctl-hp{position:absolute!important;left:-9999px!important;top:-9999px!important;}
+
+  .ctl-consent{display:flex;flex-direction:column;gap:8px;margin:4px 0 14px;}
+  .ctl-check{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;line-height:1.4;color:#4B5563;cursor:pointer;}
+  .ctl-check input{width:18px;height:18px;margin:0;flex-shrink:0;accent-color:#5B4BD8;cursor:pointer;}
+  .ctl-check a{color:#4B5563;text-decoration:underline;}
+  .ctl-check a:hover{color:#5B4BD8;}
+  .ctl-check.err{color:#cf2f2f;}
+  .ctl-check.err input{outline:2px solid #ef4444;outline-offset:1px;}
+
+  .ctl-btn{
+    width:100%;margin-top:4px;padding:15px 20px;border:0;border-radius:10px;cursor:pointer;
+    background:linear-gradient(135deg,#5B4BD8 0%,#6d59ff 100%);color:#fff;
+    font-size:16px;font-weight:700;font-family:inherit;
+    box-shadow:0 12px 26px rgba(91,75,216,.24);
+    transition:transform .18s ease,box-shadow .18s ease,opacity .2s;
+  }
+  .ctl-btn:hover{transform:translateY(-1px);}
+  .ctl-btn:disabled{opacity:.65;cursor:default;transform:none;box-shadow:none;}
+  .ctl-msg{display:none;margin-top:10px;font-size:14px;line-height:1.45;color:#cf2f2f;}
+  .ctl-msg.show{display:block;}
+
+  .ctl-note{display:flex;align-items:flex-start;gap:12px;margin-top:16px;font-size:13px;line-height:1.45;color:#4B5563;}
+  .ctl-note svg{width:20px;height:20px;flex-shrink:0;color:#6B7080;margin-top:1px;}
+
+  @media (max-width:560px){
+    .ctl-modal{padding:24px 20px 20px;border-radius:18px;}
+    .ctl-art{top:30px;right:10px;transform:scale(.72);transform-origin:top right;}
+    .ctl-title{font-size:27px;}
+    .ctl-text{font-size:14.5px;}
+  }
+  @media (max-width:360px){
+    .ctl-art{display:none;}
+  }
+  </style>
+
+  <div id="ctl-overlay" role="dialog" aria-modal="true" aria-labelledby="ctl-title" aria-hidden="true">
+    <div class="ctl-modal">
+      <button type="button" class="ctl-close" id="ctl-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="ctl-art" aria-hidden="true">
+        <div class="ctl-art-blob"></div>
+        <div class="ctl-art-card">
+          <div class="ctl-art-title">Proposal</div>
+          <div class="ctl-art-bar" style="width:100%"></div>
+          <div class="ctl-art-bar" style="width:78%"></div>
+          <div class="ctl-art-bar" style="width:52%"></div>
+          <svg class="ctl-art-arrow" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4c-6 2-8 9-3 15"/><path d="M9 16l4 4 3-5"/><path d="M19 3.5l1.5-1"/></svg>
+        </div>
+      </div>
+
+      <div class="ctl-body">
+        <div class="ctl-badge">Free consultation</div>
+        <h2 class="ctl-title" id="ctl-title">B2B leads<br>and meetings<br><span>from $35.<br>For real.</span></h2>
+        <p class="ctl-text">Tell us what clients you need — we’ll check your niche and suggest an email outreach plan.</p>
+
+        <form id="ctlForm" autocomplete="on" novalidate>
+          <label class="ctl-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+            <input type="text" name="name" maxlength="100" placeholder="Your name" autocomplete="name" aria-label="Your name">
+          </label>
+          <label class="ctl-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L3 11l6 2 2 6 10-15z"/><path d="M9 13l3-2"/></svg>
+            <input type="text" name="contact" maxlength="60" placeholder="Phone or work email" autocomplete="email" aria-label="Phone or work email">
+          </label>
+          <label class="ctl-field" id="ctl-site-field">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
+            <input type="text" name="site" maxlength="300" placeholder="Your website or product description" autocomplete="url" aria-label="Your website or product description" required aria-required="true">
+          </label>
+
+          <input class="ctl-hp" type="text" name="ctl_hp_x" tabindex="-1" autocomplete="off" readonly aria-hidden="true">
+                    <div class="ctl-consent">
+            <label class="ctl-check">
+                <input type="checkbox" name="consent_pd">
+                <span>I agree to the <a href="/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms/" target="_blank" rel="noopener">Terms of Use</a></span>
+              </label>
+          </div>
+
+          <button type="submit" class="ctl-btn" id="ctlBtn">Send request</button>
+          <div class="ctl-msg" id="ctlMsg" role="alert"></div>
+        </form>
+
+        <div class="ctl-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></svg>
+          <span>No lengthy pitches, no commitments.<br>We start with your task.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var WORKER_URL = "https://calltalk-form.dm93vtb.workers.dev/";
+    var DELAY_MS   = 20000;
+    var SHOWN_KEY  = 'ct_lead_popup_shown';
+    var SENT_KEY   = 'ct_lead_sent';
+
+    var overlay = document.getElementById('ctl-overlay');
+    var form    = document.getElementById('ctlForm');
+    var btn     = document.getElementById('ctlBtn');
+    var msg     = document.getElementById('ctlMsg');
+    if(!overlay || !form) return;
+
+    function store(kind){ try{ return window[kind]; }catch(e){ return null; } }
+    function getFlag(kind, key){ try{ var s = store(kind); return s ? s.getItem(key) : null; }catch(e){ return null; } }
+    function setFlag(kind, key){ try{ var s = store(kind); if(s) s.setItem(key, '1'); }catch(e){} }
+
+    var prevOverflow = '';
+    function open(){
+      prevOverflow = document.documentElement.style.overflow;
+      document.documentElement.style.overflow = 'hidden';
+      overlay.classList.add('show');
+      overlay.setAttribute('aria-hidden', 'false');
+      setFlag('sessionStorage', SHOWN_KEY);
+    }
+    function close(){
+      overlay.classList.remove('show');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = prevOverflow;
+    }
+
+    function tryOpen(){
+      if(getFlag('localStorage', SENT_KEY) || getFlag('sessionStorage', SHOWN_KEY)) return;
+      var success = document.getElementById('ct-popup-overlay');
+      var busy = (success && success.classList.contains('show')) ||
+                 (document.activeElement && document.activeElement.closest &&
+                  document.activeElement.closest('#ctbForm'));
+      if(busy){ setTimeout(tryOpen, 10000); return; }
+      open();
+    }
+    setTimeout(tryOpen, DELAY_MS);
+
+    document.getElementById('ctl-close').addEventListener('click', close);
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) close(); });
+    document.addEventListener('keydown', function(e){
+      if((e.key === 'Escape' || e.key === 'Esc') && overlay.classList.contains('show')) close();
+    });
+
+    var contactInput = form.contact;
+    function parseContact(raw){
+      var v = raw.trim();
+      if(!v) return null;
+      if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return {value: v};
+      var digits = v.replace(/\D/g, '');
+      if(/^[\d+()\-\s]+$/.test(v) && digits.length >= 7 && digits.length <= 15) return {value: v};
+      return {error: true};
+    }
+
+    function fieldOf(input){ return input.closest('.ctl-field, .ctl-check'); }
+    function showErr(input, text){
+      fieldOf(input).classList.add('err');
+      msg.textContent = text;
+      msg.className = 'ctl-msg show';
+      input.focus();
+    }
+    form.addEventListener('input', function(e){
+      var f = e.target.closest && e.target.closest('.ctl-field, .ctl-check');
+      if(f) f.classList.remove('err');
+      msg.className = 'ctl-msg';
+    });
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      if(!form.name.value.trim()){ showErr(form.name, 'Please enter your name'); return; }
+      var contact = parseContact(form.contact.value);
+      if(!contact || contact.error){
+        showErr(form.contact, 'Enter a phone number with country code or a work email');
+        return;
+      }
+      if(!form.site.value.trim()){ showErr(form.site, 'Add your website or briefly describe your product'); return; }
+      if(!form.consent_pd.checked){ showErr(form.consent_pd, 'Please accept the Privacy Policy and Terms of Use'); return; }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      var payload = {
+        name:     form.name.value.trim(),
+        phone:    contact.value,
+        telegram: '',
+        site:     form.site.value.trim(),
+        comment:  'Popup form (after 20 seconds on site) · Source: plemio.com (EN)',
+        website:  form.ctl_hp_x.value,
+        consent_pd:    form.consent_pd.checked,
+        consent_terms: form.consent_pd.checked
+      };
+
+      fetch(WORKER_URL, {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(payload)
+      })
+      .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); })
+      .then(function(res){
+        if(!(res && res.ok)) throw new Error('bad');
+        setFlag('localStorage', SENT_KEY);
+        form.reset();
+        close();
+        if(typeof window.ctShowSuccessPopup === 'function') window.ctShowSuccessPopup();
+      })
+      .catch(function(){
+        msg.textContent = 'Something went wrong. Please try again in a minute.';
+        msg.className = 'ctl-msg show';
+      })
+      .finally(function(){
+        btn.disabled = false;
+        btn.textContent = 'Send request';
+      });
+    });
+  })();
+  </script>
+
+<script>
+  function toggleCliTags() {
+    var hidden = document.getElementById('cliHiddenTags');
+    var label  = document.getElementById('cliBtnLabel');
+    var chev   = document.getElementById('cliChevron');
+    var isOpen = hidden.classList.toggle('open');
+    chev.classList.toggle('open', isOpen);
+    label.textContent = isOpen ? 'Show less' : 'Show more';
+  }
+
+  function toggleMenu(btn) {
+    var menu = document.getElementById('mobileMenu');
+    var open = btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (menu) menu.hidden = !open;
+  }
+  function closeMenu() {
+    var btn = document.querySelector('.ct-burger');
+    var menu = document.getElementById('mobileMenu');
+    if (btn) { btn.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    if (menu) menu.hidden = true;
+  }
+
+  function toggleMore(btn) {
+    var card = btn.parentElement;
+    var collapse = card.querySelector('.ct-ben-collapse');
+    var txt = btn.querySelector('.ct-more-txt');
+    var isOpen = btn.classList.toggle('open');
+    if (collapse) collapse.hidden = !isOpen;
+    if (txt) txt.textContent = isOpen ? 'Show less' : 'Learn more';
+  }
+
+  function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.ct-faq-item').forEach(function (it) {
+      it.classList.remove('open');
+      var a = it.querySelector('.ct-faq-a');
+      if (a) a.hidden = true;
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+      var a = item.querySelector('.ct-faq-a');
+      if (a) a.hidden = false;
+    }
+  }
+
+  function toggleFaqMore(btn) {
+    var more = document.getElementById('faqMore');
+    if (!more) return;
+    var willOpen = more.hidden;
+    more.hidden = !willOpen;
+    btn.textContent = willOpen ? 'Show less' : 'More questions';
+  }
+
+  var GAP = 20;
+
+  function makeCarousel(track) {
+    if (!track) return null;
+    var animating = false;
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(0)';
+
+    function step() {
+      var c = track.children[0];
+      return c ? c.getBoundingClientRect().width + GAP : track.clientWidth;
+    }
+    function next() {
+      if (animating || track.children.length < 2) return;
+      animating = true;
+      var d = step();
+      track.style.transition = 'transform .35s ease';
+      track.style.transform = 'translateX(' + (-d) + 'px)';
+      var done = function (e) {
+        if (e && e.target !== track) return;
+        track.removeEventListener('transitionend', done);
+        track.style.transition = 'none';
+        track.appendChild(track.children[0]);
+        track.style.transform = 'translateX(0)';
+        animating = false;
+      };
+      track.addEventListener('transitionend', done);
+    }
+    function prev() {
+      if (animating || track.children.length < 2) return;
+      animating = true;
+      var d = step();
+      track.insertBefore(track.children[track.children.length - 1], track.children[0]);
+      track.style.transition = 'none';
+      track.style.transform = 'translateX(' + (-d) + 'px)';
+      void track.offsetWidth;
+      track.style.transition = 'transform .35s ease';
+      track.style.transform = 'translateX(0)';
+      var done = function (e) {
+        if (e && e.target !== track) return;
+        track.removeEventListener('transitionend', done);
+        track.style.transition = 'none';
+        animating = false;
+      };
+      track.addEventListener('transitionend', done);
+    }
+
+    var startX = null;
+    track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      if (dx < -40) next(); else if (dx > 40) prev();
+      startX = null;
+    });
+
+    return { next: next, prev: prev };
+  }
+
+  var leadCar = null, casesCar = null, probCar = null;
+  var mqMobile = window.matchMedia('(max-width: 720px)');
+  document.addEventListener('DOMContentLoaded', function () {
+    leadCar = makeCarousel(document.getElementById('leadTrack'));
+    casesCar = makeCarousel(document.getElementById('casesTrack'));
+    function initMobileCarousels() {
+      if (!mqMobile.matches) return;
+      if (!probCar) probCar = makeCarousel(document.getElementById('probTrack'));
+    }
+    initMobileCarousels();
+    if (mqMobile.addEventListener) mqMobile.addEventListener('change', initMobileCarousels);
+    else if (mqMobile.addListener) mqMobile.addListener(initMobileCarousels);
+  });
+
+  function scrollProb(dir) {
+    if (!probCar) return;
+    if (dir > 0) probCar.next(); else probCar.prev();
+  }
+
+  function scrollLeads(dir) {
+    if (!leadCar) return;
+    if (dir > 0) leadCar.next(); else leadCar.prev();
+  }
+
+  function toggleNiches(btn) {
+    var list = btn.previousElementSibling;
+    var txt = btn.querySelector('.ct-niche-more-txt');
+    var isOpen = btn.classList.toggle('open');
+    if (list) list.classList.toggle('collapsed', !isOpen);
+    if (txt) txt.textContent = isOpen ? 'Show less' : 'See more industries';
+  }
+
+  function scrollCases(dir) {
+    if (!casesCar) return;
+    if (dir > 0) casesCar.next(); else casesCar.prev();
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('ctaForm').style.display = 'none';
+    document.getElementById('ctaSent').style.display = 'block';
+    return false;
+  }
+</script>
+
+<style>
+  .ct-seo{
+    background:#F7F8FC;
+    padding:64px 32px;
+    border-top:1px solid #E7E8EF;
+    font-family:'Manrope','Inter',Arial,sans-serif;
+    box-sizing:border-box;
+  }
+  .ct-seo *{box-sizing:border-box;}
+  .ct-seo-card{
+    max-width:1040px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid #E7E8EF;
+    border-radius:20px;
+    padding:36px 40px 28px;
+  }
+  .ct-seo-h2{
+    font-size:24px;
+    font-weight:800;
+    line-height:1.25;
+    letter-spacing:-.02em;
+    color:#14152A;
+    margin:0 0 18px;
+  }
+  .ct-seo-h3{
+    font-size:17px;
+    font-weight:700;
+    line-height:1.35;
+    color:#14152A;
+    margin:26px 0 10px;
+  }
+  .ct-seo-body{
+    position:relative;
+    max-height:250px;
+    overflow:hidden;
+    transition:max-height .5s ease;
+  }
+  .ct-seo-body.is-open{max-height:3000px;}
+  .ct-seo-body p{
+    font-size:15px;
+    line-height:1.75;
+    color:#4B5563;
+    margin:0 0 14px;
+  }
+  .ct-seo-body p:last-child{margin-bottom:0;}
+  .ct-seo-body ul{margin:0 0 14px;padding-left:0;list-style:none;}
+  .ct-seo-body li{
+    position:relative;
+    font-size:15px;
+    line-height:1.7;
+    color:#4B5563;
+    padding-left:22px;
+    margin-bottom:8px;
+  }
+  .ct-seo-body li::before{
+    content:'';
+    position:absolute;
+    left:2px;top:10px;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:#5B4BD8;
+  }
+  
+  .ct-seo-fade{
+    position:absolute;
+    left:0;right:0;bottom:0;
+    height:130px;
+    pointer-events:none;
+    backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,.75) 55%,#fff 100%);
+    -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,#000 45%);
+    mask-image:linear-gradient(to bottom,rgba(0,0,0,0) 0%,#000 45%);
+    opacity:1;
+    transition:opacity .35s ease;
+  }
+  .ct-seo-body.is-open .ct-seo-fade{opacity:0;}
+  .ct-seo-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:20px;
+    padding:12px 20px;
+    background:#fff;
+    border:1px solid #D9DBE7;
+    border-radius:12px;
+    font-family:inherit;
+    font-size:14px;
+    font-weight:600;
+    color:#14152A;
+    cursor:pointer;
+    transition:border-color .2s ease,color .2s ease,box-shadow .2s ease;
+  }
+  .ct-seo-btn:hover{border-color:#5B4BD8;color:#5B4BD8;box-shadow:0 4px 14px rgba(91,75,216,.10);}
+  .ct-seo-btn__ico{font-size:16px;line-height:1;color:#5B4BD8;}
+  @media (max-width:768px){
+    .ct-seo{padding:44px 16px;}
+    .ct-seo-card{padding:26px 20px 22px;border-radius:16px;}
+    .ct-seo-h2{font-size:20px;}
+    .ct-seo-body{max-height:300px;}
+  }
+  .ct-seo-body a{color:#5B4BD8;text-decoration:underline;text-underline-offset:3px;}
+</style>
+
+<section class="ct-seo" aria-label="About Plemio and our lead generation services">
+  <div class="ct-seo-card">
+    <h2 class="ct-seo-h2">B2B lead generation agency: how we bring you enterprise clients</h2>
+
+    <div class="ct-seo-body" id="ctSeoBody">
+      <p>Plemio is a full-cycle B2B lead generation agency. We don’t sell traffic or run ads: our job is to get you into a direct conversation with decision-makers at the companies you actually want to work with. To do that, we build and verify a list for your specific niche, write a sequence of personalized emails, warm up the sending mailboxes and handle the conversation until the prospect confirms interest.</p>
+
+      <p>B2B lead generation differs from typical performance marketing: longer sales cycles, several decision-makers on the buyer’s side and bigger deal sizes. The “spend the budget, get inquiries” logic doesn’t work here — you need to reach the right company and the right role with the right message. That’s why we start not with sending but with the ideal customer profile: industry, revenue, region, decision-maker title and the problem your product solves. The accuracy of this profile directly determines how many emails turn into replies.</p>
+
+      <h3 class="ct-seo-h3">What B2B leads mean in our model</h3>
+      <p>The B2B leads we deliver are not a contact export from a database. A lead is a reply in which a prospect asked for a proposal, a meeting, a call or more information. Along with the contact you get the company name, the person’s title and the full email thread, so your rep enters the conversation with context instead of starting cold. Replies like “unsubscribe me” or “not relevant” are not leads and are never billed.</p>
+
+      <h3 class="ct-seo-h3">Which companies B2B lead generation fits</h3>
+      <p>Winning B2B clients with personal emails works best where a complex product is sold to another company and more than one person makes the decision:</p>
+      <ul>
+        <li>manufacturing, wholesale and industrial equipment;</li>
+        <li>IT, software development and enterprise systems;</li>
+        <li>logistics, freight and warehousing;</li>
+        <li>engineering, design and construction contracting;</li>
+        <li>professional services: consulting, audit, legal and HR services;</li>
+        <li>and many other niches.</li>
+      </ul>
+      <p>In these niches paid search is either overpriced or fails to reach the right role, while an email lands directly in the decision-maker’s inbox and lets you approach a specific company from your target list.</p>
+
+      <h3 class="ct-seo-h3">How pricing and timelines work</h3>
+      <p>Pricing for our B2B lead generation services has two parts. The first is a fixed monthly fee: it covers the campaign infrastructure — the sending platform, contact data, domain setup and mailbox warm-up. The second is payment for leads: after each month, and only for replies with confirmed interest. Not for opens, not for clicks. First leads usually arrive on day 10–14 — that time goes into warming up the Google Workspace mailboxes and preparing the copy, without which emails land in spam. After that the volume scales: to get more leads, we add domains and mailboxes and expand the list segments without changing the pricing model.</p>
+
+      <p>For your sales team the result looks like this: instead of cold calling and sorting through irrelevant contacts, reps get a flow of inquiries from companies that have already replied and shown interest. That turns enterprise client acquisition into a managed process with a clear cost per inquiry rather than a series of one-off spikes.</p>
+
+      <p>The lead flow is built on cold email outreach: see <a href="#how">how it works</a>, <a href="#prices">pricing</a> and <a href="#cases">results from real campaigns</a> above.</p>
+
+      <div class="ct-seo-fade" aria-hidden="true"></div>
+    </div>
+
+    <button type="button" class="ct-seo-btn" id="ctSeoBtn" aria-expanded="false" aria-controls="ctSeoBody" onclick="ctSeoToggle(this)">
+      <span class="ct-seo-btn__ico" aria-hidden="true">+</span>
+      <span class="ct-seo-btn__txt">Read more</span>
+    </button>
+  </div>
+</section>
+
+<script>
+  function ctSeoToggle(btn){
+    var body = document.getElementById('ctSeoBody');
+    if (!body) return;
+    var open = body.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.querySelector('.ct-seo-btn__ico').textContent = open ? '−' : '+';
+    btn.querySelector('.ct-seo-btn__txt').textContent = open ? 'Show less' : 'Read more';
+  }
+</script>
+
+<style>
+  .site-footer{
+    --ft-bg: #ffffff;
+    --ft-fg: #6b7280;
+    --ft-heading: #111827;
+    --ft-link: #6b7280;
+    --ft-link-hover: #111827;
+    --ft-border: #ececef;
+    --ft-accent: #2f6bff;
+
+    background: var(--ft-bg);
+    color: var(--ft-fg);
+    border-top: 1px solid var(--ft-border);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  .site-footer,
+  .site-footer *{ box-sizing: border-box !important; }
+
+  .site-footer__inner{
+    max-width: 1240px;
+    margin: 0 auto !important;
+    padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 48px) !important;
+    width: 100%;
+  }
+
+  
+  .site-footer__top{
+    display: grid !important;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: start;
+  }
+
+  .footer-brand__logo{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--ft-heading);
+  }
+  .footer-brand__logo span{ color: var(--ft-accent); }
+
+  .footer-brand__desc{
+    margin: 16px 0 0;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 320px;
+  }
+
+  .footer-col__title{
+    margin: 0 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ft-heading);
+  }
+
+  .footer-col__list{
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .footer-col__list li{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+  .footer-col__list li::before{ content: none !important; }
+  .footer-col__list a{
+    color: var(--ft-link) !important;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.4;
+    width: fit-content;
+    transition: opacity .15s ease;
+    border-bottom: 0 !important;
+  }
+  .footer-col__list a:hover,
+  .footer-col__list a:focus-visible{
+    color: var(--ft-link) !important;
+    opacity: .65;
+  }
+  .footer-col__list a:focus-visible{
+    outline: 2px solid var(--ft-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  
+  .site-footer__bottom{
+    margin-top: clamp(32px, 5vw, 56px);
+    padding-top: 24px;
+    border-top: 1px solid var(--ft-border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  
+  @media (max-width: 900px){
+    .site-footer__top{ grid-template-columns: 1fr 1fr !important; }
+    .footer-brand{ grid-column: 1 / -1 !important; }
+    .footer-brand__desc{ max-width: none; }
+  }
+  
+  @media (max-width: 560px){
+    .site-footer__top{ grid-template-columns: 1fr !important; gap: 32px; }
+    .site-footer__bottom{ justify-content: flex-start; }
+  }
+</style>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+
+    <div class="site-footer__top">
+
+      <div class="footer-brand">
+        <span class="footer-brand__logo">Plemio</span>
+        <p class="footer-brand__desc">B2B&nbsp;lead generation agency. We bring you qualified clients through cold email outreach.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Menu">
+        <h3 class="footer-col__title">Menu</h3>
+        <ul class="footer-col__list">
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#prices">Pricing</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Legal">
+        <h3 class="footer-col__title">Legal</h3>
+        <ul class="footer-col__list">
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© 2026 Plemio. B2B lead generation agency.</span>
+    </div>
+
+  </div>
+</footer>
+<script>
+(function(){
+  var KEY = 'ct_cookie_consent';
+
+  var PRIVACY_URL = '/privacy-policy/';
+
+  var forceShow = /[?&]cookietest=1/.test(location.search);
+
+  function getSaved(){
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+
+  if (!forceShow) {
+    var saved = getSaved();
+    if (saved === 'accepted' || saved === 'declined') return;
+  }
+
+  var CSS = '' +
+  '.cookie-consent{' +
+    '--ck-bg:#ffffff;--ck-fg:#4b5563;--ck-heading:#111827;' +
+    '--ck-border:#ececef;--ck-accent:#2f6bff;--ck-accent-hover:#1f57e6;' +
+    'position:fixed !important;' +
+    'left:clamp(12px,3vw,28px) !important;right:clamp(12px,3vw,28px) !important;' +
+    'bottom:clamp(12px,3vw,28px) !important;top:auto !important;' +
+    'z-index:2147483000 !important;' +
+    'opacity:0;visibility:hidden;transform:translateY(16px);' +
+    'transition:opacity .28s ease,transform .28s ease,visibility .28s;' +
+    'max-width:1240px;margin:0 auto !important;' +
+    'padding:clamp(18px,2.6vw,26px) clamp(18px,3vw,32px) !important;' +
+    'background:var(--ck-bg) !important;color:var(--ck-fg) !important;' +
+    'border:1px solid var(--ck-border);border-radius:16px;' +
+    'box-shadow:0 18px 48px rgba(17,24,39,.14);' +
+    'font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;' +
+    'box-sizing:border-box;' +
+  '}' +
+  '.cookie-consent,.cookie-consent *{box-sizing:border-box !important;}' +
+  '.cookie-consent.is-visible{opacity:1 !important;visibility:visible !important;transform:translateY(0) !important;}' +
+  '.cookie-consent__inner{display:flex !important;align-items:center;gap:clamp(18px,3vw,40px);}' +
+  '.cookie-consent__text{flex:1 1 auto;min-width:0;}' +
+  '.cookie-consent__title{margin:0 0 8px !important;padding:0 !important;font-size:17px !important;' +
+    'font-weight:600 !important;line-height:1.3 !important;color:var(--ck-heading) !important;}' +
+  '.cookie-consent__desc{margin:0 !important;padding:0 !important;font-size:14px !important;' +
+    'line-height:1.6 !important;color:var(--ck-fg) !important;}' +
+  '.cookie-consent__desc a{color:var(--ck-accent) !important;text-decoration:none !important;' +
+    'border-bottom:1px solid rgba(47,107,255,.35) !important;}' +
+  '.cookie-consent__desc a:hover{opacity:.8;}' +
+  '.cookie-consent__actions{flex:0 0 auto;display:flex !important;align-items:center;gap:12px;}' +
+  '.cookie-consent__btn{display:inline-flex !important;align-items:center;justify-content:center;' +
+    'width:auto;min-width:0;height:auto;margin:0 !important;padding:13px 28px !important;' +
+    'border:1px solid transparent;border-radius:10px !important;' +
+    'font-family:inherit !important;font-size:15px !important;font-weight:600 !important;' +
+    'line-height:1 !important;text-transform:none !important;letter-spacing:normal !important;' +
+    'white-space:nowrap;cursor:pointer;' +
+    'transition:background-color .15s ease,color .15s ease,border-color .15s ease;}' +
+  '.cookie-consent__btn--accept{background:var(--ck-accent) !important;color:#fff !important;}' +
+  '.cookie-consent__btn--accept:hover{background:var(--ck-accent-hover) !important;}' +
+  '.cookie-consent__btn--decline{background:transparent !important;color:var(--ck-fg) !important;' +
+    'border-color:var(--ck-border) !important;}' +
+  '.cookie-consent__btn--decline:hover{color:var(--ck-heading) !important;border-color:#d5d7dd !important;}' +
+  '.cookie-consent__btn:focus-visible{outline:2px solid var(--ck-accent);outline-offset:3px;}' +
+  '@media (max-width:860px){' +
+    '.cookie-consent__inner{flex-direction:column;align-items:stretch;gap:18px;}' +
+    '.cookie-consent__actions{flex-direction:column-reverse;}' +
+    '.cookie-consent__btn{width:100% !important;padding:14px 20px !important;}' +
+  '}';
+
+  var HTML = '' +
+  '<div class="cookie-consent__inner">' +
+    '<div class="cookie-consent__text">' +
+      '<p class="cookie-consent__title">We use cookies</p>' +
+      '<p class="cookie-consent__desc">' +
+        'By continuing to use this site, you agree to our use of cookies as described in our ' +
+        '<a href="' + PRIVACY_URL + '" target="_blank" rel="noopener">Privacy Policy</a>.' +
+      '</p>' +
+    '</div>' +
+    '<div class="cookie-consent__actions">' +
+      '<button type="button" class="cookie-consent__btn cookie-consent__btn--decline" data-cookie-action="decline">Decline</button>' +
+      '<button type="button" class="cookie-consent__btn cookie-consent__btn--accept" data-cookie-action="accept">Accept</button>' +
+    '</div>' +
+  '</div>';
+
+  function init(){
+    if (document.getElementById('cookieConsent')) return;
+
+    var style = document.createElement('style');
+    style.id = 'cookieConsentStyle';
+    style.appendChild(document.createTextNode(CSS));
+    document.head.appendChild(style);
+
+    var banner = document.createElement('div');
+    banner.className = 'cookie-consent';
+    banner.id = 'cookieConsent';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.innerHTML = HTML;
+
+    document.body.appendChild(banner);
+
+    setTimeout(function(){ banner.classList.add('is-visible'); }, 800);
+
+    banner.addEventListener('click', function(e){
+      var btn = e.target && e.target.closest ? e.target.closest('[data-cookie-action]') : null;
+      if (!btn) return;
+
+      var value = btn.getAttribute('data-cookie-action') === 'accept' ? 'accepted' : 'declined';
+      try {
+        localStorage.setItem(KEY, value);
+        document.cookie = KEY + '=' + value + '; path=/; max-age=' + 60 * 60 * 24 * 365 + '; SameSite=Lax';
+      } catch (err) {}
+
+      banner.classList.remove('is-visible');
+      setTimeout(function(){ if (banner.parentNode) banner.parentNode.removeChild(banner); }, 400);
+
+      // if (value === 'accepted') {  }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+
+</body>
+</html>
