@@ -1,0 +1,18 @@
+# Plemio
+
+> Plemio is a B2B lead generation agency that uses personalized cold email outreach to reach decision-makers and deliver interested prospects to clients' sales teams.
+
+Plemio's pricing has two parts: a fixed monthly fee from $900 for campaign infrastructure and a price from $35 per lead. The exact lead price and monthly volume are agreed before launch. A lead is a prospect's reply showing interest or requesting a next step; an unsubscribe or a reply saying the offer is not relevant is not a lead. Results and timing vary by campaign.
+
+## Website
+
+- [Plemio home page](https://ple-mio.com/): Service overview and contact form.
+- [How it works](https://ple-mio.com/#how): Targeting, contact research, outreach and lead handoff.
+- [Pricing](https://ple-mio.com/#prices): Monthly fee, per-lead pricing and example.
+- [Campaign results](https://ple-mio.com/#cases): Examples from steel structures, coffee and IT development.
+- [Frequently asked questions](https://ple-mio.com/#faq): Lead definition, timing, pricing and campaign expectations.
+- [Discuss a project](https://ple-mio.com/#discuss): Contact form for a lead forecast and project discussion.
+
+## Detailed information
+
+- [Plemio full overview](https://ple-mio.com/llms-full.txt): A longer text summary of the information on the home page.

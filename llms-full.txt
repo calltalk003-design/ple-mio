@@ -1,0 +1,55 @@
+# Plemio: B2B Lead Generation
+
+> Plemio is a B2B lead generation agency offering personalized cold email outreach and a pricing model combining a monthly infrastructure fee with a fee per lead.
+
+Source: https://ple-mio.com/
+
+## Service
+
+Plemio manages outbound B2B lead generation from targeting through the first conversation. It identifies suitable companies and decision-makers, builds contact lists, writes email sequences, sets up and warms mailboxes, and hands interested replies to the client's sales team. The client's sales representatives then continue the conversation.
+
+Targeting can be based on industry, company size, region and decision-maker role. Campaigns are built for the client's product; the site states that leads are not resold to other clients.
+
+## What counts as a lead
+
+A lead is a reply in which a prospect confirms interest or requests a next step, such as a proposal, pricing or terms, a trial order, a call, a meeting, an audit or a demo. The site also lists referrals to another decision-maker as a lead type. Replies such as "unsubscribe me" or "not relevant" are not billed as leads.
+
+Leads can be delivered by email or into the client's CRM with the company, contact, title, request and full email thread.
+
+## Pricing
+
+- Fixed monthly fee: from $900, covering the sending platform, contact data and technical infrastructure.
+- Fee per lead: from $35; the exact price is fixed in the contract before launch.
+- Illustrative monthly calculation: $900 fixed fee plus 20 leads at $35 each equals $1,600.
+- The price per lead depends on factors including the niche, average deal size, product complexity and how narrow the decision-maker profile is. The exact price and monthly volume are agreed before launch.
+
+Pricing source: https://ple-mio.com/#prices
+
+## Timing and expected volume
+
+The site says first leads typically arrive on days 10–14, after list preparation, writing and mailbox warm-up. It gives illustrative averages for a project using three domains and three Google Workspace mailboxes: 10–15 leads in month one, 20–30 in month two and 30–40 in month three. Volumes can be scaled by adding domains and mailboxes.
+
+These are site-reported averages, not guarantees. Plemio states that some campaigns underperform and that the right combination may take until the third month to emerge.
+
+## Campaign examples
+
+The following figures are reported on Plemio's website and describe individual campaigns, not guaranteed outcomes:
+
+- Steel structures: 37 leads and 4 deals over 3 months; $40 per lead.
+- Coffee roaster: 85 leads and 14 deals over 2.5 months; $47 per lead.
+- Custom IT development: 23 leads and 2 deals over 3 months; $68 per lead.
+
+Source: https://ple-mio.com/#cases
+
+## About and contact
+
+Plemio describes itself as a B2B lead generation team. Its website identifies Ian Edwards as founder. To discuss a project or request a forecast, use the form at https://ple-mio.com/#discuss.
+
+## Further information
+
+- [Home page](https://ple-mio.com/)
+- [How it works](https://ple-mio.com/#how)
+- [Pricing](https://ple-mio.com/#prices)
+- [Campaign results](https://ple-mio.com/#cases)
+- [Frequently asked questions](https://ple-mio.com/#faq)
+- [Short LLM overview](https://ple-mio.com/llms.txt)
